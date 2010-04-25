@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen" />
+<title>用户注册</title>
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <h1>标题</h1>
+  </div>
+  <div id="register">
+    <div id="content">
+      <form id="registerform" name="registerform" method="post" action="#">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+          <caption>
+          用户注册
+          </caption>
+          <tr>
+            <td>邮箱：</td>
+            <td><input type="text" id="email" /></td>
+            <td><span id="email_info">请输入您常用的电子邮件,用于取回密码</span></td>
+          </tr>
+          <tr>
+            <td>用户名：</td>
+            <td><input type="text" id="username" /></td>
+            <td>中文、英文字母、数字(0-9_.)，长度4-16位</td>
+          </tr>
+          <tr>
+            <td>密码：</td>
+            <td><input type="password" id="passwd" /></td>
+            <td>密码长度为6-20个字符</td>
+          </tr>
+          <tr>
+            <td>再次输入密码：</td>
+            <td><input type="password" id="passwdagain" /></td>
+            <td>请重复输入上面的密码</td>
+          </tr>
+          <tr>
+            <td colspan="3"><input type="submit" id="submit" value="注册" />
+              <input type="reset" id="reset" value="重置" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div id="sidebar">
+      <p>已经拥有账户？请点击<a href="home.html">这里</a>登录</p>
+      <p></p>
+    </div>
+  </div>
+  <div id="bottom" style="color:#FFFFFF"></div>
+</div>
+</body>
+</html>
