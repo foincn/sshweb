@@ -7,6 +7,12 @@ body {
 	padding:0;
 }
 
+#wrap {
+	position:absolute;
+	width:960px;
+	margin-left:-480px;
+	left:50%;
+}
 #header	{
 	/*background:url(../images/logo_02.png) no-repeat top left;*/
 	text-decoration:none;
