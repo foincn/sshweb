@@ -23,22 +23,13 @@ body {
 
 }
 
-/* searchform */
-#header table {
-	margin:0;
-	padding:0;
-	border:0;
-	border-collapse:collapse;
-	width:960px;
-}
-
-#search td{
-	height:40px;
-	padding-bottom:20px;
-}
 /*导航栏*/
+#navigator{
+	margin:0;
+}
 #navigator ul li{
-		display:inline;
+	display:inline;
+	padding:4px;
 }
 /*主体内容*/
 #content {
