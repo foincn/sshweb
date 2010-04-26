@@ -178,7 +178,7 @@ disableOverride();
       
          <!--[error]-->
          
-         <h2 class="first">简介</h2>
+         <h2 class="first">在这加东西/themes/default/main.php</h2>
          
          <!--[description]-->
          
