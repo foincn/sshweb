@@ -10,14 +10,14 @@
 /* GLOBAL ELEMENTS */
 html,body {
    margin: 0; padding: 0;
-   background: #0b1933;
+   background: #fff;
    font-size: 100%;
-   font-family: "trebuchet ms", arial, verdana;
-	color: #444;
+   font-family: Arial, Helvetica, sans-serif;
+	color: #000;
    text-align: center;
 }
 a {
-   color: #EF7B0A;
+   /*color: #EF7B0A;*/
    text-decoration:none; 
 }
 a:hover {
@@ -37,25 +37,32 @@ p, td, th, ul {
    margin: 0 auto 0 auto;
    text-align: left;
 }
-
+#header {
+	text-align:center;
+}
+#inputplace {
+	text-align:center;
+}
 #content {
    background: #fff;
-   border-top: 3px solid #ce6c1c;
-   border-bottom: 3px solid #ce6c1c;
+  /* border-top: 3px solid #ce6c1c;
+   border-bottom: 3px solid #ce6c1c;*/
    padding: 20px;
 }
 
 /* ELEMENTS */
 h1 {
    font: 250% "trebuchet ms";
-   color: #fff;
+   color: #000;
    padding: 40px 0 10px 10px;
    margin: 0;
 }
-h1 span { color: #6BAD42; }
+h1 a { color:#000; text-decoration:none}
+h1 a:hover { color: #6BAD42;  text-decoration: none;}
+/*h1 span { color: #6BAD42; }
 h1 a { color: #FFF; }
 h1 a:hover { color: #6BAD42;  text-decoration: none;}
-h1 a:hover span { color: #FFF;}
+h1 a:hover span { color: #FFF;}*/
 h2 {
    font: bold 100% arial, verdana, sans-serif;
    color: #3B578B;
@@ -64,7 +71,7 @@ h2 {
    margin: 25px 0 10px 0;
 }
 p+p { padding-top: 1em; }
-form.form { font-size: 80%; background-color: #f5f5f5; padding: 10px;}
+form.form { /*font-size: 80%; background-color: #f5f5f5;*/ padding: 10px;}
 #options {
    list-style-type: none;
    width: 500px;
@@ -78,14 +85,15 @@ form.form { font-size: 80%; background-color: #f5f5f5; padding: 10px;}
 #footer {
    margin: 10px 0 0 0; 
    font-size: 80%;
-   color: #ccc;
+   color: #000;
+   text-align:center;
 }
 #nav {
    text-align: right;
    list-style-type: none;
    font-size: 80%;
-   border-top: 1px solid #ccc;
-   margin: 20px 0 0 0;
+   border-bottom: 1px solid #ccc;
+   margin: 4px 4px 0 0;
    padding: 0;
 }
 #nav li {
@@ -100,7 +108,7 @@ form.form { font-size: 80%; background-color: #f5f5f5; padding: 10px;}
 /* STYLES */
 .first { margin-top: 0 }
 input.textbox { width: 500px; font: 120% arial, verdana, sans-serif; }
-input.button {font: 120% arial, verdana, sans-serif; margin-top: 10px;}
+input.button {font: 120% arial, verdana, sans-serif; margin-top: 10px; width:50px;}
 label { font-weight: light; }
 #error {
    border: 1px solid red;
@@ -159,17 +167,26 @@ disableOverride();
 </script>
 </head>
 <body>
-   
+         <div id="menubar">
+         <ul id="nav">
+            <li class="left"><a href="index.php">首页</a></li>
+            <li class="left"><a href="edit-browser.php">浏览器设定</a></li>
+            <li class="left"><a href="cookies.php">管理Cookies</a></li>
+            <li><a href="privacy.php">隐私政策</a></li>
+            <li><a href="disclaimer.php">免责声明</a></li>            
+            <li><a href="terms.php">使用条款</a></li>            
+         </ul>
+         </div>   
    <div id="wrapper">
    
       <div id="header">
-         <h1><a href="index.php"><?php
+         <h1><a href="index.php"><img src="themes/default/logo.gif" border="0"><?php
          // Just a bit of PHP to auto-color a multiple word name
-         global $themeReplace;
-         if (isset($themeReplace['site_name'])) {
-            $spacePos = strrpos($themeReplace['site_name'], ' ');
-            echo substr_replace($themeReplace['site_name'], '<span>', $spacePos, 1) . '</span>';
-         }
+         //global $themeReplace;
+         //if (isset($themeReplace['site_name'])) {
+           // $spacePos = strrpos($themeReplace['site_name'], ' ');
+            //echo substr_replace($themeReplace['site_name'], '<span>', $spacePos, 1) . '</span>';
+         //}
          ?></a></h1>
       </div>
    
@@ -180,15 +197,17 @@ disableOverride();
          
          
          
-         <h2>输入URL</h2>
+         <!--h2>输入URL</h2-->
          
          <!--[index_above_form]-->
-         
-         <form action="includes/process.php?action=update" method="post" onsubmit="return updateLocation(this);" class="form">
+         <div id="inputplace">
+         <form action="includes/process.php?action=update" method="post" onSubmit="return updateLocation(this);" class="form">
             <input type="text" name="u" id="input" size="40" class="textbox">
             <input type="submit" value="Go" class="button">
-            &nbsp;
-            [<a style="cursor:pointer;" onclick="document.getElementById('options').style.display = (document.getElementById('options').style.display=='none'?'':'none')">设定</a>]
+            </form>
+            </div>
+            <!--&nbsp;
+            [<a style="cursor:pointer;" onClick="document.getElementById('options').style.display = (document.getElementById('options').style.display=='none'?'':'none')">设定</a>]-->
             <ul id="options">
 <?php foreach ( $toShow as $option ) echo <<<HTML
                <li>
@@ -208,7 +227,7 @@ HTML;
          <!--[index_below_form]-->
 
          <!-- CONTENT END -->
-         
+         <!--div id="menubar">
          <ul id="nav">
             <li class="left"><a href="index.php">首页</a></li>
             <li class="left"><a href="edit-browser.php">浏览器设定</a></li>
@@ -217,7 +236,7 @@ HTML;
             <li><a href="disclaimer.php">免责声明</a></li>            
             <li><a href="terms.php">使用条款</a></li>            
          </ul>
-         
+         </div-->
       </div>
       
       <div id="footer">

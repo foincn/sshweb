@@ -19,7 +19,7 @@
 ******************************************************************/
 
 // Website name
-$themeReplace['site_name'] = 'glype proxy';
+$themeReplace['site_name'] = 'fan qiang';
 
 // Meta description
 $themeReplace['meta_description'] = <<<OUT
