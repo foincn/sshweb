@@ -33,7 +33,12 @@ OUT;
 
 // Proxy description text
 $themeReplace['description'] = '
- <p>在这加东西东西！！/themes/default/config.php</p>
+ <p>想上twitter看看您喜欢的明星天天在干什么嘛？<br>
+ 想上facebook上认识外国的朋友嘛？<br>
+ 想去youtube上看全球各地的朋友上传的有趣的片子嘛？<br>
+ 想上picasa看看出国留学的哥们儿分享的照片嘛？？<br>
+ 红杏怎能不出墙~<br></p>
+ 
    ';
 
 // Ad location above the form on the index page
