@@ -178,9 +178,7 @@ disableOverride();
       
          <!--[error]-->
          
-         <h2 class="first">在这加东西/themes/default/main.php</h2>
          
-         <!--[description]-->
          
          <h2>输入URL</h2>
          
@@ -203,6 +201,9 @@ HTML;
             <br style="clear: both;">
          
          </form>
+         <h2 class="first">红杏出墙</h2>
+         
+         <!--[description]-->
          
          <!--[index_below_form]-->
 
