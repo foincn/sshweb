@@ -1,6 +1,6 @@
 <style type="text/css">
    /* Make room for the mini-form */
-   html body { margin-top: 30px; }
+   html body { margin-top: 40px; }
    
    /* Reset all styles */
    #include * {
