@@ -20,5 +20,5 @@ $smarty->assign("ssh_name",$in_user['ssh_name']);
 $smarty->assign("ssh_pass",$in_user['ssh_pass']);
 $smarty->display("status.html");
 
-print_r($in_user);
+//print_r($in_user);
 ?>

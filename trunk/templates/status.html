@@ -1,31 +1,31 @@
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
 </head>
 
 <form name="myform" method="post" action="reg.php">
 <table>
 	<tr align="center">
-		鐧婚檰閭锛歿$name}
+		登陆邮箱：{$name}
 	</tr>
 	{if $paytime != ''}
 	<tr align="center">
-		SSH鐢ㄦ埛鍚嶏細{$ssh_name}
+		SSH用户名：{$ssh_name}
 	</tr>
 	<tr>
-		SSH瀵嗙爜
+		SSH密码
 		<input name="pw" type="text" value="{$ssh_passwd}" />
 	</tr>
 	<tr align="center">
-		璁㈣喘鏃堕棿锛歿$paytime}
+		订购时间：{$paytime}
 	</tr>
 	<tr align="center">
-		鍒版湡鏃堕棿锛歿$overtime}
+		到期时间：{$overtime}
 	</tr>
 	<tr align="center">
-		娉ㄥ唽鏃堕棿锛歿$regtime}
+		注册时间：{$regtime}
 	</tr>
 	<tr>
-		<input name="tijiao" type="submit" value="淇敼SSH瀵嗙爜" />
+		<input name="tijiao" type="submit" value="修改SSH密码" />
 	</tr>
 	{/if}
 </table>
