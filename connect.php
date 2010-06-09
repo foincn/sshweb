@@ -1,6 +1,6 @@
 <?php
 $server = "fan-qiang.com:3306";
-$user = "root";
+$user = "ssh";
 $pass = "buptisc";
 
 
