@@ -1,11 +1,11 @@
 <?php
-$server = "192.168.123.3:3306";
+$server = "fan-qiang.com:3306";
 $user = "root";
 $pass = "buptisc";
 
 
-mysql_connect($server,$user,$pass) or die("ä¸èƒ½è¿žæŽ¥æ•°æ®åº“:".mysql_error());
+mysql_connect($server,$user,$pass) or die("²»ÄÜÁ´½ÓÊý¾Ý¿â:".mysql_error());
 
-mysql_select_db('test') or die("ä¸èƒ½è¿žæŽ¥æ•°æ®åº“:".mysql_error());
+mysql_select_db('test') or die("²»ÄÜÁ´½ÓÊý¾Ý¿â:".mysql_error());
 
 ?>
