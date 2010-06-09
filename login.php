@@ -14,13 +14,13 @@ else{
 	//echo $result;
 	$in_user = mysql_fetch_array($result);
 	if($pass == $in_user[password]){
-		//杩涘叆绯荤粺
+		//进入系统
 		$_SESSION['name'] = $name;
 		$login = 250;
 		include("status.php");
 	}
 	else{
-		echo "杈撳叆閿欒";
+		echo "输入错误";
 		$smarty->display("login.html");
 	}
 	//print_r($in_user);
