@@ -15,20 +15,20 @@ else{
 	$in_user = mysql_fetch_array($result);
 	//print_r($in_user);
 	if('' == $in_user[name]){
-		//æ²¡æœ‰è¿™ä¸ªç”¨æˆ·ï¼Œå¯ä»¥åŠ 
+		//¼ÓÓÃ»§
 		if($pass != $pass2){
-			echo "ä¸¤æ¬¡è¾“å…¥å¯†ç ä¸ä¸€è‡´";
+			echo "Á½´ÎÊäÈë²»Ò»ÖÂ";
 			$smarty->display("reg.html");
 		}
 		else{
 			$sql = "insert into `user` values (default , '$name' , '$pass2' , now() ,null,null,null,null)";
 			$result = mysql_query($sql) or die("wrong:".mysql_error());
-			echo "æ³¨å†ŒæˆåŠŸ";
+			echo "×¢²á³É¹¦";
 			$smarty->display("login.html");
 		}
 	}
 	else{
-		echo "æœ‰ç›¸åŒçš„ç”¨æˆ·åå­˜åœ¨";
+		echo "ÓĞÏàÍ¬µÄÓÃ»§Ãû´æÔÚ";
 		$smarty->display("reg.html");
 	}
 	//print_r($in_user);
