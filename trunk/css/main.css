@@ -1,23 +1,24 @@
 /* CSS Document */
+*{
+	margin:0;
+	padding:0;
+}
 body {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:small;
-	/*background:#000000 url(../images/main-bg.jpg) no-repeat center top;*/
-	margin:0;
-	padding:0;
+	text-align:center;
 }
 
 #wrap {
-	position:absolute;
 	width:960px;
-	margin-left:-480px;
-	left:50%;
+	margin:0 auto;
+	padding:10px;
 }
 #header	{
-	/*background:url(../images/logo_02.png) no-repeat top left;*/
-	text-decoration:none;
-	margin:0;
-	padding:0;
+	background:url(../images/fan-qiang.gif) no-repeat top center;
+	margin:0 auto;
+	height:110px;
+	width:960px;
 }
 #header h1 {
 
@@ -25,41 +26,50 @@ body {
 
 /*导航栏*/
 #navigator{
-	margin:0;
+	
 }
 #navigator ul li{
-	display:inline;
-	padding:4px;
+	
 }
 /*主体内容*/
 #content {
-	background:url(../images/content-bg.png) repeat-y;
-	margin:0;
-	padding:10px;
-	float:left;
-	width:65%;
+	
 }	
 
 #content ul li{
-	display:inline;
-	text-decoration:none;
+	
 }
 /*侧边栏*/
 #sidebar {
-	margin:0;
-	padding:10px;
-	float:right;
-	width:30%;
 }
 /*底边*/
 #bottom {
 	/*background:url(../images/bottom.gif) no-repeat top center;*/
-	margin:0;
-	padding:0;
+	margin:0 auto;
 	clear:both;
 	height:50px;
 	}
 /*注册*/
-#register table td{
-	padding: 4px;
+table {
+	border:1px solid #069;
+}
+table caption{
+	background:#069;
+	padding:8px;
+	font-size:110%;
+	font-weight:bold;
+	color:#FFF;
+}
+table td{
+	padding: 8px;
+}
+.form{
+	width:350px;
+	margin:0 auto;
+}
+.tijiao{
+	background:#069;
+	color:#FFF;
+	width:50px;
+	height:30px;
 }
