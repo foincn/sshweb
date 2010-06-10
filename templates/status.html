@@ -1,32 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<link type="text/css" href="../css/main.css" rel="stylesheet" />
 </head>
-
+<div id="header"></div>
+<div id="wrap">
 <form name="myform" method="post" action="reg.php">
-<table>
-	<tr align="center">
-		登陆邮箱：{$name}
+<table class="form">
+<caption>用户信息</caption>
+	<tr>
+		<td align="right">登陆邮箱：</td>
+        <td>{$name}</td>
 	</tr>
 	{if $paytime != ''}
 	<tr align="center">
-		SSH用户名：{$ssh_name}
+		<td align="right">SSH用户名：</td>
+        <td>{$ssh_name}</td>
 	</tr>
 	<tr>
-		SSH密码
-		<input name="pw" type="text" value="{$ssh_passwd}" />
+		<td align="right">SSH密码</td>
+		<td><input name="pw" type="text" value="{$ssh_passwd}" /></td>
 	</tr>
 	<tr align="center">
-		订购时间：{$paytime}
+		<td align="right">订购时间：</td>
+        <td>{$paytime}</td>
 	</tr>
 	<tr align="center">
-		到期时间：{$overtime}
+		<td align="right">到期时间：</td>
+        <td>{$overtime}</td>
 	</tr>
 	<tr align="center">
-		注册时间：{$regtime}
+		<td align="right">注册时间：</td>
+        <td>{$regtime}</td>
 	</tr>
 	<tr>
+    <td colspan="2" align="right">
 		<input name="tijiao" type="submit" value="修改SSH密码" />
+        </td>
 	</tr>
 	{/if}
 </table>
 </form>
+</div>
+</html>

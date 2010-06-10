@@ -1,23 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<link type="text/css" href="../css/main.css" rel="stylesheet" />
 </head>
-
+<div id="header"></div>
+<div id="wrap">
 <form name="myform" method="post" action="reg.php">
-<table>
+<table class="form">
+<caption>用户注册</caption>
 	<tr align="center">
-		邮箱
-		<input name="id" type="text" value="" />
+		<td align="right">邮箱</td>
+		<td><input name="id" type="text" value="" /></td>
 	</tr>
 	<tr>
-		登陆密码
-		<input name="pw" type="password" value="" />
+		<td align="right">登陆密码</td>
+		<td><input name="pw" type="password" value="" /></td>
 	</tr>
 	<tr>
-		再次输入登陆密码
-		<input name="pw2" type="password" value="" />
+		<td align="right">再次输入登陆密码</td>
+		<td><input name="pw2" type="password" value="" /></td>
 	</tr>
 	<tr>
-		<input name="tijiao" type="submit" value="提交" />
+    <td colspan="2" align="right">
+		<input name="tijiao" type="submit" value="提交"  class ="tijiao"/>        </td>
 	</tr>
 </table>
 </form>
+</div>
+</html>
