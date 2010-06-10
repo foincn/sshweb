@@ -94,8 +94,7 @@ $sign = $alipay->Get_Sign();
 
 //若改成GET方式传递，请取消下面的两行注释
 $link=$alipay->create_url();
-/*echo "<script>window.location =\"$link\";</script>"; 
-*/
+echo "<script>window.location =\"$link\";</script>"; 
 ?>
 <html>
 <head>
