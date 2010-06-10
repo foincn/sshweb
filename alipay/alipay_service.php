@@ -7,6 +7,7 @@
 	'说明：
 	'以下代码只是方便商户测试，提供的样例代码，商户可以根据自己网站的需要，按照技术文档编写,并非一定要使用该代码。
 	'该代码仅供学习和研究支付宝接口使用，只是提供一个参考。
+
 */
 
 class alipay_service {
@@ -28,35 +29,45 @@ class alipay_service {
 		if($this->transport == "https") {
 			$this->gateway = "https://www.alipay.com/cooperate/gateway.do?";
 		} else $this->gateway = "http://www.alipay.com/cooperate/gateway.do?";
-		$sort_array = array();
-		$arg = "";
-		$sort_array = $this->arg_sort($this->parameter);
+		$sort_array  = array();
+		$arg         = "";
+		$sort_array  = $this->arg_sort($this->parameter);
 		while (list ($key, $val) = each ($sort_array)) {
-			$arg.=$key."=".$this->charset_encode($val,$this->parameter['_input_charset'])."&";
+			$arg.=$key."=".$this->charset_encode($val,$this->parameter['_input_charset'],$this->parameter['_input_charset'])."&";
 		}
 		$prestr = substr($arg,0,count($arg)-2);  //去掉最后一个问号
 		$this->mysign = $this->sign($prestr.$this->security_code);
 	}
 
-
+	//若使用GET方式传递，请使用create_url函数获得完整URL链接
 	function create_url() {
-		$url        = $this->gateway;
-		$sort_array = array();
-		$arg        = "";
-		$sort_array = $this->arg_sort($this->parameter);
+		$url         = $this->gateway;
+		$sort_array  = array();
+		$arg         = "";
+		$sort_array  = $this->arg_sort($this->parameter);
 		while (list ($key, $val) = each ($sort_array)) {
-			$arg.=$key."=".urlencode($this->charset_encode($val,$this->parameter['_input_charset']))."&";
+			$arg.=$key."=".urlencode($this->charset_encode($val,$this->parameter['_input_charset'],$this->parameter['_input_charset']))."&";
 		}
 		$url.= $arg."sign=" .$this->mysign ."&sign_type=".$this->sign_type;
 		return $url;
-
+	}
+	
+	//若使用POST方式传递，请使用Get_Sign函数获得加密结果字符串
+	function Get_Sign() {
+		$url = $this->gateway;
+		$sort_array = array();
+		$arg = "";
+		$sort_array = $this->arg_sort($this->parameter);
+		while (list ($key, $val) = each ($sort_array)) {
+			$arg.=$key."=".urlencode($this->charset_encode($val,$this->parameter['_input_charset'],$this->parameter['_input_charset']))."&";
+		}
+		return $this->mysign;
 	}
 
 	function arg_sort($array) {
 		ksort($array);
 		reset($array);
 		return $array;
-
 	}
 
 	function sign($prestr) {
@@ -70,7 +81,6 @@ class alipay_service {
 			die("支付宝暂不支持".$this->sign_type."类型的签名方式");
 		}
 		return $mysign;
-
 	}
 	function para_filter($parameter) { //除去数组中的空值和签名模式
 		$para = array();
@@ -81,7 +91,7 @@ class alipay_service {
 		return $para;
 	}
 	//实现多种字符编码方式
-	function charset_encode($input,$_output_charset,$_input_charset="GBK") {
+	function charset_encode($input,$_output_charset ,$_input_charset ) {
 		$output = "";
 		if(!isset($_output_charset) )$_output_charset  = $this->parameter['_input_charset'];
 		if($_input_charset == $_output_charset || $input ==null) {
