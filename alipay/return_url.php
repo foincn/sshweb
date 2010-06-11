@@ -22,6 +22,8 @@ require_once("alipay_config.php");
 $alipay = new alipay_notify($partner,$security_code,$sign_type,$_input_charset,$transport);
 $verify_result = $alipay->return_verify();
 
+
+print_r($_GET);
 //获取支付宝的反馈参数
    $dingdan	= $_GET['out_trade_no'];	//获取支付宝传递过来的订单号
    $total	= $_GET['price'];			//获取支付宝传递过来的总价格  
@@ -35,6 +37,7 @@ if($verify_result) {    //认证合格
 		//请获取返回信息的这个字段discount的值，取绝对值，就是买家付款优惠的金额。即 原订单的总金额=买家付款返回的金额total_fee +|discount|.
 
 		echo "支付成功<br>订单号是：".$dingdan."<br>订单金额是：".$total;
+		echo "<br><a href=\"http://fan-qiang.com/sshweb/status.php\">返回fan-qiang.com</a>";
 	}
 	else
 	{
