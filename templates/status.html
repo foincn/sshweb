@@ -6,40 +6,47 @@
 </head>
 <div id="header"></div>
 <div id="wrap">
-<form name="myform" method="post" action="reg.php">
+<form name="myform" method="post" action="change_status.php">
 <table class="form">
-<caption>用户信息</caption>
+	<caption>用户信息</caption>
 	<tr>
-		<td align="right">登陆邮箱：</td>
-        <td>{$name}</td>
+		<td align="right" >用户名：</td>
+		<td>{$name}</td>
 	</tr>
+	<tr>
+		<td align="right">密码：</td>
+		<td><input name="pw" type="text" value="{$password}" /></td>
+	</tr>
+	<tr>
+	<td align="right">旺旺账号：</td>
+		<td><input name="taobao_name" type="text" value="{$taobao_name}" /></td>
+	</tr>
+	<tr>
+		<td align="right">QQ：</td>
+		<td><input name="qq" type="text" value="{$qq}" /></td>
+	</tr>
+	<tr>
+		<td align="right">E-mail：</td>
+		<td><input name="email" type="text" value="{$email}" /></td>
+	</tr>
+		<input name="id" type="hidden" value="{$name}" />
 	{if $paytime != ''}
 	<tr align="center">
-		<td align="right">SSH用户名：</td>
-        <td>{$ssh_name}</td>
-	</tr>
-	<tr>
-		<td align="right">SSH密码</td>
-		<td><input name="pw" type="text" value="{$ssh_passwd}" /></td>
-	</tr>
-	<tr align="center">
 		<td align="right">订购时间：</td>
-        <td>{$paytime}</td>
+		<td>{$paytime}</td>
 	</tr>
 	<tr align="center">
 		<td align="right">到期时间：</td>
-        <td>{$overtime}</td>
+		<td>{$overtime}</td>
 	</tr>
-	<tr align="center">
-		<td align="right">注册时间：</td>
-        <td>{$regtime}</td>
-	</tr>
-	<tr>
-    <td colspan="2" align="right">
-		<input name="tijiao" type="submit" value="修改SSH密码" />
-        </td>
-	</tr>
+
 	{/if}
+
+	<tr>
+		<td colspan="2" align="right"><input name="tijiao" type="submit"
+			value="修改信息" /></td>
+	</tr>
+
 </table>
 </form>
 </div>
