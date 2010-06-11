@@ -17,7 +17,8 @@ else{
 		//进入系统
 		$_SESSION['name'] = $name;
 		$login = 250;
-		include("status.php");
+		//TODO:跳转页面
+		header("Location:status.php");
 	}
 	else{
 		echo "输入错误";

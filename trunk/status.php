@@ -13,11 +13,12 @@ $result = mysql_query($sql);
 $in_user = mysql_fetch_array($result);
 
 $smarty->assign("name",$in_user['name']);
-$smarty->assign("regtime",$in_user['regtime']);
+$smarty->assign("password",$in_user['password']);
 $smarty->assign("paytime",$in_user['paytime']);
 $smarty->assign("overtime",$in_user['overtime']);
-$smarty->assign("ssh_name",$in_user['ssh_name']);
-$smarty->assign("ssh_pass",$in_user['ssh_pass']);
+$smarty->assign("taobao_name",$in_user['taobao_name']);
+$smarty->assign("qq",$in_user['qq']);
+$smarty->assign("email",$in_user['email']);
 $smarty->display("status.html");
 
 //print_r($in_user);

@@ -4,6 +4,9 @@ include("connect.php");
 $name = $_POST[id];
 $pass = $_POST[pw];
 $pass2 = $_POST[pw2];
+$email = $_POST[email];
+$qq = $_POST[qq];
+$taobao_name = $_POST[taobao_name];
 //print_r($_POST);
 if($pass2 == ''){
 	$smarty->display("reg.html");
@@ -21,7 +24,7 @@ else{
 			$smarty->display("reg.html");
 		}
 		else{
-			$sql = "insert into `user` values (default , '$name' , '$pass2' , now() ,null,null,null,null)";
+			$sql = "insert into `user` values (default , '$name' , '$pass2' , null ,null,'$taobao_name','$qq','$email',null)";
 			$result = mysql_query($sql) or die("wrong:".mysql_error());
 			echo "×¢²á³É¹¦";
 			$smarty->display("login.html");
