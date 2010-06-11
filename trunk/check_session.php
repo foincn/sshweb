@@ -5,7 +5,7 @@
 
 
 if($_SESSION["name"]==""){
-	header("Location:templates/login.html");
+	header("Location:login.php");
 	$notlogin = true;
 }
 ?>

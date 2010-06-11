@@ -10,7 +10,7 @@
 <table class="form">
 	<caption>用户信息</caption>
 	<tr>
-		<td align="right" >用户名：</td>
+		<td align="right">用户名：</td>
 		<td>{$name}</td>
 	</tr>
 	<tr>
@@ -18,7 +18,7 @@
 		<td><input name="pw" type="text" value="{$password}" /></td>
 	</tr>
 	<tr>
-	<td align="right">旺旺账号：</td>
+		<td align="right">旺旺账号：</td>
 		<td><input name="taobao_name" type="text" value="{$taobao_name}" /></td>
 	</tr>
 	<tr>
@@ -29,7 +29,7 @@
 		<td align="right">E-mail：</td>
 		<td><input name="email" type="text" value="{$email}" /></td>
 	</tr>
-		<input name="id" type="hidden" value="{$name}" />
+	<input name="id" type="hidden" value="{$name}" />
 	{if $paytime != ''}
 	<tr align="center">
 		<td align="right">订购时间：</td>
@@ -41,10 +41,12 @@
 	</tr>
 
 	{/if}
-
 	<tr>
 		<td colspan="2" align="right"><input name="tijiao" type="submit"
 			value="修改信息" /></td>
+	</tr>
+	<tr>
+		<a href="alipay/enter.php?name={$name}&yue=10">付费</a>
 	</tr>
 
 </table>
