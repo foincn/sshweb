@@ -17,18 +17,34 @@ require_once("alipay_config.php");
 //该页面测试时出现“调试错误”请参考：http://club.alipay.com/read-htm-tid-8681712.html
 //要传递的参数要么不允许为空，要么就不要出现在数组与隐藏控件或URL链接里
 ///////////////////////////////////
-
+$yue = $_GET['yue'];	//传入月数
+switch ($yue){
+	case 1:
+		$qian = 4.5;
+		break;
+	case 3:
+		$qian = 13;
+		break;
+	case 6:
+		$qian = 25;
+		break;
+	case 12:
+		$qian = 45;
+		break;
+	default:
+		$qian = 0.01;
+}
 ///////以下参数是需要通过下单时的订单数据传入进来获得//////////
 $out_trade_no = date('Ymdhms');
-$subject = "SSH账号一日";
-$body = "SSH账号一日一分测试";
-$price = "0.01";
+$subject = "SSH账号".$yue."个月";
+$body = "购买后可以直接使用您的账号，具体请登陆fan-qiang.com";
+$price = $qian;
 
-$receive_name = "测试";
-$receive_address = "测试收货地址";
-$receive_zip = "123456";
-$receive_phone = "0571-81234567";
-$receive_mobile = "13312341234";
+$receive_name = $_GET['name'];
+$receive_address = "交费后自动开通";
+$receive_zip = "";
+$receive_phone = "";
+$receive_mobile = "";
 
 $logistics_fee_1 = "0.00";
 $logistics_payment_1 = "BUYER_PAY";
@@ -38,7 +54,7 @@ $logistics_fee_2 = "0.00";
 $logistics_payment_2 = "BUYER_PAY";
 $logistics_type_2 = "POST";
 
-$buyer_email = "abc@126.com";
+$buyer_email = "";
 ////////////////////////////////////////////////////////////
 
 $parameter = array(
