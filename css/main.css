@@ -64,12 +64,19 @@ table td{
 	padding: 8px;
 }
 .form{
-	width:350px;/*設置了表格宽度才能保证表格居中*/
+	width:450px;
 	margin:0 auto;
 }
+/*input{
+	width:150px;
+}*/
 .tijiao{
 	background:#069;
+	border: 1px solid #FFFFFF;
+	border-bottom:1px solid #666;
+	border-right:1px solid #666;
 	color:#FFF;
-	width:50px;
-	height:30px;
+	width:100px;
+	height:25px;
+	font-size:105%;	
 }
