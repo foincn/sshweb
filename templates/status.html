@@ -31,11 +31,11 @@
 	</tr>
 	<input name="id" type="hidden" value="{$name}" />
 	{if $paytime != ''}
-	<tr align="center">
+	<tr>
 		<td align="right">订购时间：</td>
 		<td>{$paytime}</td>
 	</tr>
-	<tr align="center">
+	<tr>
 		<td align="right">到期时间：</td>
 		<td>{$overtime}</td>
 	</tr>
@@ -45,9 +45,26 @@
 		<td colspan="2" align="right"><input name="tijiao" type="submit"
 			value="修改信息" /></td>
 	</tr>
-	<tr>
+	<!--tr>
 		<a href="alipay/enter.php?name={$name}&yue=10">付费</a>
-	</tr>
+	</tr-->
+
+</table>
+</form>
+<form name="pay" method="post" action="alipay/enter.php">
+<table class="form">
+	<tr>
+	<td align="right">选择付费方式：</td>
+	<td>
+    	<input type="radio" name="paybymonth" value="one_month"/>1个月
+        <input type="radio" name="paybymonth" value="three_months"/>3个月
+        <input type="radio" name="paybymonth" value="six_months"/>6个月
+        <input type="radio" name="paybymonth" value="twelve_months"/>12个月
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2" align="right"><input type="submit" value="付费" /></td>
+    </tr>
 
 </table>
 </form>
