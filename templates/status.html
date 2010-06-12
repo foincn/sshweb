@@ -54,14 +54,15 @@
 <form name="pay" method="post" action="alipay/enter.php">
 <table class="form">
 	<tr>
-	<td align="right">选择付费方式：</td>
+	<td align="right">选择付费（续费）时长：</td>
 	<td>
-    	<input type="radio" name="paybymonth" value="one_month"/>1个月
-        <input type="radio" name="paybymonth" value="three_months"/>3个月
-        <input type="radio" name="paybymonth" value="six_months"/>6个月
-        <input type="radio" name="paybymonth" value="twelve_months"/>12个月
+    	<input type="radio" name="paymonth" value="1"/>1个月
+        <input type="radio" name="paymonth" value="3"/>3个月
+        <input type="radio" name="paymonth" value="6"/>6个月
+        <input type="radio" name="paymonth" value="12"/>12个月
     </td>
     </tr>
+    	<input name="name" type="hidden" value="{$name}" />
     <tr>
     <td colspan="2" align="right"><input type="submit" value="付费" /></td>
     </tr>

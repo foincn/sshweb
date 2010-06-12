@@ -1,6 +1,6 @@
 <?php
-$pay_money = "45";
-$receive_user = "testdb";
+//$pay_money = "45";
+//$receive_user = "testdb";
 
 switch ($pay_money) {
 	case 45 :
