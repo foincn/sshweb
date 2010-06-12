@@ -43,7 +43,7 @@ if($verify_result) {   //认证合格
         //放入订单交易完成后的数据库更新程序代码，请务必保证echo出来的信息只有success
 		echo "success";
 
-		//log_result("verify_success");
+		log_result($_POST);
 	}	
 	else if($_POST['trade_status'] == 'WAIT_BUYER_CONFIRM_GOODS') {    //交易状态：卖家已发货等待买家确认收货
         //放入订单交易完成后的数据库更新程序代码，请务必保证echo出来的信息只有success
