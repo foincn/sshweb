@@ -15,7 +15,8 @@
 function  log_result($word) {
 	$fp = fopen("log.txt","a");	
 	flock($fp, LOCK_EX) ;
-	fwrite($fp,"执行日期：".strftime("%Y%m%d%H%I%S",time())."\n".$word."\n");
+	$temp = var_export($word,true);
+	fwrite($fp,"执行日期：".strftime("%Y%m%d%H%I%S",time())."\n".$temp."\n");
 	flock($fp, LOCK_UN); 
 	fclose($fp);
 }

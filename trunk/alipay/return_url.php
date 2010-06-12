@@ -23,7 +23,7 @@ $alipay = new alipay_notify($partner,$security_code,$sign_type,$_input_charset,$
 $verify_result = $alipay->return_verify();
 
 
-print_r($_GET);
+//print_r($_GET);Array ( [body] => 购买后可以直接使用您的账号，具体请登陆fan-qiang.com [buyer_email] => d2@bupt.cn [buyer_id] => 2088102271385533 [discount] => 0.00 [gmt_create] => 2010-06-11 23:00:17 [gmt_logistics_modify] => 2010-06-11 23:00:17 [gmt_payment] => 2010-06-11 23:01:47 [is_success] => T [is_total_fee_adjust] => Y [logistics_fee] => 0.00 [logistics_payment] => SELLER_PAY [logistics_type] => EXPRESS [notify_id] => RqPnCoPT3K9%2Fvwbh3I%2BLU09q3DlJSkhAzP%2Frj%2FsAWNc5%2Fo4u%2FLWsC7PsXxzoXukUm8Ho [notify_time] => 2010-06-11 23:01:47 [notify_type] => trade_status_sync [out_trade_no] => 20100611100640 [payment_type] => 1 [price] => 0.01 [quantity] => 1 [receive_address] => 交费后自动开通 [receive_name] => testdb [seller_actions] => SEND_GOODS [seller_email] => kecker.d2@gmail.com [seller_id] => 2088002473321794 [subject] => SSH账号10个月 [total_fee] => 0.01 [trade_no] => 2010061182369712 [trade_status] => WAIT_SELLER_SEND_GOODS [use_coupon] => N [sign] => 251e16eb069860a39f1a2147aca82ac7 [sign_type] => MD5 )
 //获取支付宝的反馈参数
    $dingdan	= $_GET['out_trade_no'];	//获取支付宝传递过来的订单号
    $total	= $_GET['price'];			//获取支付宝传递过来的总价格  
