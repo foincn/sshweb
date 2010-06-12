@@ -64,7 +64,7 @@ table td{
 	padding: 8px;
 }
 .form{
-	width:350px;
+	width:350px;/*設置了表格宽度才能保证表格居中*/
 	margin:0 auto;
 }
 .tijiao{
