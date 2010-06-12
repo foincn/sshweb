@@ -17,7 +17,7 @@ require_once("alipay_config.php");
 //该页面测试时出现“调试错误”请参考：http://club.alipay.com/read-htm-tid-8681712.html
 //要传递的参数要么不允许为空，要么就不要出现在数组与隐藏控件或URL链接里
 ///////////////////////////////////
-$yue = $_GET['yue'];	//传入月数
+$yue = $_POST['paymonth'];	//传入月数
 switch ($yue){
 	case 1:
 		$qian = 4.5;
@@ -40,7 +40,7 @@ $subject = "SSH账号".$yue."个月";
 $body = "购买后可以直接使用您的账号，具体请登陆fan-qiang.com";
 $price = $qian;
 
-$receive_name = $_GET['name'];
+$receive_name = $_POST['name'];
 $receive_address = "交费后自动开通";
 $receive_zip = "";
 $receive_phone = "";
