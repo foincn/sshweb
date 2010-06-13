@@ -13,7 +13,7 @@ if ($_SESSION ["name"] != $name) {
 } else {
 	$sql = "update user set password='$pass',taobao_name='$taobao_name',qq='$qq',email='$email' where name='$name'";
 	$result = mysql_query ( $sql ) or die ( "wrong:" . mysql_error () );
-	//TODO:跳转页面&&设置密码页面
+	
 	$sql = "select * from user where name='$name'";
 	$result = mysql_query ( $sql );
 	$in_user = mysql_fetch_array ( $result );
@@ -24,7 +24,7 @@ if ($_SESSION ["name"] != $name) {
 			@file_get_contents($url);
 		}
 	}
-	
+	//TODO:跳转页面
 	header ( "Location:status.php" );
 
 }

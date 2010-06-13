@@ -42,9 +42,8 @@ if ($verify_result) { //认证合格
 		//log_result("verify_success");
 	} else if ($_POST ['trade_status'] == 'WAIT_SELLER_SEND_GOODS') { //交易状态：买家已付款，等待卖家发货
 		//放入订单交易完成后的数据库更新程序代码，请务必保证echo出来的信息只有success
-		$pay_money = $_POST['total_fee'];
-		$receive_user = $_POST['receive_name'];
-		
+		$pay_money = $_POST ['total_fee'];
+		$receive_user = $_POST ['receive_name'];
 		
 		switch ($pay_money) {
 			case 45 :
@@ -101,6 +100,17 @@ if ($verify_result) { //认证合格
 		}
 		$sql = "update user set paytime='$pay_date',overtime='$end_date' where name = '$receive_user'";
 		$result = mysql_query ( $sql );
+		
+		//下面是在服务器上建账号
+		$sql = "select * from user where name='$receive_user'";
+		$result = mysql_query ( $sql );
+		$in_user = mysql_fetch_array ( $result );
+		
+		require_once '../servers.php';
+		foreach ( $servers as $server ) {
+			$url = "http://$server:9999/cgi-bin/system_adduser.cgi?name=$receive_user&pass=".$in_user['password']."&date=$end_date";
+			@file_get_contents ( $url );
+		}
 		
 		echo "success";
 		
