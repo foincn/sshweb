@@ -19,9 +19,11 @@ if ($_SESSION ["name"] != $name) {
 	$in_user = mysql_fetch_array ( $result );
 	if ($in_user ['overtime'] != '') {
 		require_once 'servers.php';
+		$opts = array('http'=>array('method'=>"GET",'timeout'=>2));
+		$context = stream_context_create($opts);
 		foreach ($servers as $server){
 			$url = "http://$server:9999/cgi-bin/system_adduser.cgi?name=$name&pass=$pass";
-			@file_get_contents($url);
+			@file_get_contents($url,false,$context);
 		}
 	}
 	//TODO:Ìø×ªÒ³Ãæ
