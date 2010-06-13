@@ -42,6 +42,10 @@ if ($verify_result) { //认证合格
 		//log_result("verify_success");
 	} else if ($_POST ['trade_status'] == 'WAIT_SELLER_SEND_GOODS') { //交易状态：买家已付款，等待卖家发货
 		//放入订单交易完成后的数据库更新程序代码，请务必保证echo出来的信息只有success
+		$pay_money = $_POST['total_fee'];
+		$receive_user = $_POST['receive_name'];
+		
+		
 		switch ($pay_money) {
 			case 45 :
 				$add = 12;
