@@ -98,7 +98,7 @@ if ($verify_result) { //认证合格
 				//echo "N";
 			}
 		}
-		$sql = "update user set paytime='$pay_date',overtime='$end_date' where name = '$receive_user'";
+		$sql = "update user set paytime='$pay_date',overtime='$end_date',pay=pay+$pay_money where name = '$receive_user'";
 		$result = mysql_query ( $sql );
 		
 		//下面是在服务器上建账号
