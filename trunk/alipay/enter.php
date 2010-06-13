@@ -37,7 +37,7 @@ switch ($yue){
 ///////以下参数是需要通过下单时的订单数据传入进来获得//////////
 $out_trade_no = date('Ymdhms');
 $subject = "SSH账号".$yue."个月";
-$body = "购买后可以直接使用您的账号，具体请登陆fan-qiang.com";
+$body = "购买后可以直接使用".$_POST['name']."，具体请登陆fan-qiang.com";
 $price = $qian;
 
 $receive_name = $_POST['name'];
