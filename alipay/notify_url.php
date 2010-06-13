@@ -42,7 +42,61 @@ if ($verify_result) { //认证合格
 		//log_result("verify_success");
 	} else if ($_POST ['trade_status'] == 'WAIT_SELLER_SEND_GOODS') { //交易状态：买家已付款，等待卖家发货
 		//放入订单交易完成后的数据库更新程序代码，请务必保证echo出来的信息只有success
-		include("testpay.php");
+		switch ($pay_money) {
+			case 45 :
+				$add = 12;
+				break;
+			case 25 :
+				$add = 6;
+				break;
+			case 13 :
+				$add = 3;
+				break;
+			case 4.5 :
+				$add = 1;
+				break;
+			case 0.01 :
+				$add = 2;
+				break;
+			default :
+				$add = 0;
+		}
+		$server = "67.23.228.116:3306";
+		$user = "ssh";
+		$pass = "buptisc";
+		
+		@mysql_connect ( $server, $user, $pass );
+		@mysql_select_db ( 'ssh' );
+		$sql = "select * from user where name='$receive_user'";
+		
+		$result = mysql_query ( $sql );
+		$in_user = mysql_fetch_array ( $result );
+		$pay_date = date ( "Y-m-d" );
+		
+		if ($in_user ['overtime'] == '') {
+			//not paid person!
+			$r = substr ( $pay_date, 8, 2 ); //日
+			$y = substr ( $pay_date, 5, 2 ); //月
+			$n = substr ( $pay_date, 0, 4 ); //年
+			$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add, $r, $n ) );
+		
+		} else {
+			if (date ( "Y-m-d", strtotime ( $in_user ['overtime'] ) ) > date ( "Y-m-d" )) {
+				$r = substr ( $in_user ['overtime'], 8, 2 ); //日
+				$y = substr ( $in_user ['overtime'], 5, 2 ); //月
+				$n = substr ( $in_user ['overtime'], 0, 4 ); //年
+				$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add, $r, $n ) );
+				///echo "Y";
+			} else {
+				$r = substr ( $pay_date, 8, 2 ); //日
+				$y = substr ( $pay_date, 5, 2 ); //月
+				$n = substr ( $pay_date, 0, 4 ); //年
+				$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add, $r, $n ) );
+				//echo "N";
+			}
+		}
+		$sql = "update user set paytime='$pay_date',overtime='$end_date' where name = '$receive_user'";
+		$result = mysql_query ( $sql );
 		
 		echo "success";
 		
