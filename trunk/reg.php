@@ -27,7 +27,7 @@ else{
 			$sql = "insert into `user` values (default , '$name' , '$pass2' , null ,null,'$taobao_name','$qq','$email','0')";
 			$result = mysql_query($sql) or die("wrong:".mysql_error());
 			echo "×¢²á³É¹¦";
-			$smarty->display("login.html");
+			$smarty->display("index.html");
 		}
 	}
 	else{
