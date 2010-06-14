@@ -23,7 +23,9 @@ $smarty->assign("regtime",$in_user['regtime']);
 
 
 $sql = "select * from user where name = 'test'";
-$smarty->assign("testpassword",$in_user['password']);
+$result = mysql_query($sql);
+$test = mysql_fetch_array($result);
+$smarty->assign("testpassword",$test['password']);
 
 if($in_user['regtime'] != ''){
 	
