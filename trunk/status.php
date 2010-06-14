@@ -19,6 +19,16 @@ $smarty->assign("overtime",$in_user['overtime']);
 $smarty->assign("taobao_name",$in_user['taobao_name']);
 $smarty->assign("qq",$in_user['qq']);
 $smarty->assign("email",$in_user['email']);
+$smarty->assign("regtime",$in_user['regtime']);
+
+
+$sql = "select * from user where name = 'test'";
+$smarty->assign("testpassword",$in_user['password']);
+
+if($in_user['regtime'] != ''){
+	
+}
+
 $smarty->display("status.html");
 
 //print_r($in_user);

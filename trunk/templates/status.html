@@ -19,7 +19,8 @@
 	</tr>
 	<tr>
 		<td align="right">旺旺账号：</td>
-		<td align="left"><input name="taobao_name" type="text" value="{$taobao_name}" /></td>
+		<td align="left"><input name="taobao_name" type="text"
+			value="{$taobao_name}" /></td>
 	</tr>
 	<tr>
 		<td align="right">QQ：</td>
@@ -29,6 +30,20 @@
 		<td align="right">E-mail：</td>
 		<td align="left"><input name="email" type="text" value="{$email}" /></td>
 	</tr>
+	{if $regtime != ''}
+	<tr>
+		<td align="right">注册时间：</td>
+		<td align="left">{$regtime}</td>
+	</tr>
+	<tr>
+		<td align="right">测试账号：</td>
+		<td align="left">test</td>
+	</tr>
+	<tr>
+		<td align="right">测试密码：</td>
+		<td align="left">{$testpasswd}</td>
+	</tr>
+	{/if}
 	<input name="id" type="hidden" value="{$name}" />
 	{if $paytime != ''}
 	<tr>
@@ -42,8 +57,9 @@
 
 	{/if}
 	<tr>
-    <td></td>
-		<td align="left"><input name="tijiao" type="submit" value="修改信息" class="tijiao"/></td>
+		<td></td>
+		<td align="left"><input name="tijiao" type="submit" value="修改信息"
+			class="tijiao" /></td>
 	</tr>
 	<!--tr>
 		<a href="alipay/enter.php?name={$name}&yue=10">付费</a>
@@ -54,19 +70,17 @@
 <form name="pay" method="post" action="alipay/enter.php">
 <table class="form">
 	<tr>
-	<td align="right" width="40%">选择付费（续费）时长：</td>
-	<td align="left">
-    	<input type="radio" name="paymonth" value="1"/>1个月
-        <input type="radio" name="paymonth" value="3"/>3个月
-        <input type="radio" name="paymonth" value="6"/>6个月
-        <input type="radio" name="paymonth" value="12"/>12个月
-    </td>
-    </tr>
-    	<input name="name" type="hidden" value="{$name}" />
-    <tr>
-    <td></td>
-    <td align="left"><input type="submit" value="付费" class="tijiao"/></td>
-    </tr>
+		<td align="right" width="40%">选择付费（续费）时长：</td>
+		<td align="left"><input type="radio" name="paymonth" value="1" />1个月
+		<input type="radio" name="paymonth" value="3" />3个月 <input
+			type="radio" name="paymonth" value="6" />6个月 <input type="radio"
+			name="paymonth" value="12" />12个月</td>
+	</tr>
+	<input name="name" type="hidden" value="{$name}" />
+	<tr>
+		<td></td>
+		<td align="left"><input type="submit" value="付费" class="tijiao" /></td>
+	</tr>
 
 </table>
 </form>

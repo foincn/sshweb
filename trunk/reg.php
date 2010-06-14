@@ -24,7 +24,8 @@ else{
 			$smarty->display("reg.html");
 		}
 		else{
-			$sql = "insert into `user` values (default , '$name' , '$pass2' , null ,null,'$taobao_name','$qq','$email','0')";
+			$date = date ( "Y-m-d" );
+			$sql = "insert into `user` values (default , '$name' , '$pass2' , null ,null,'$taobao_name','$qq','$email','0','$date')";
 			$result = mysql_query($sql) or die("wrong:".mysql_error());
 			echo "×¢²á³É¹¦";
 			$smarty->display("index.html");
