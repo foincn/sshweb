@@ -31,6 +31,7 @@
 		<td align="left"><input name="email" type="text" value="{$email}" /></td>
 	</tr>
 	{if $regtime != ''}
+	{if $paytime == ''}
 	<tr>
 		<td align="right">×¢²áÊ±¼ä£º</td>
 		<td align="left">{$regtime}</td>
@@ -43,6 +44,7 @@
 		<td align="right">²âÊÔÃÜÂë£º</td>
 		<td align="left">{$testpassword}</td>
 	</tr>
+	{/if}
 	{/if}
 	<input name="id" type="hidden" value="{$name}" />
 	{if $paytime != ''}
