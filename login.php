@@ -22,7 +22,7 @@ else{
 	}
 	else{
 		echo "ÊäÈë´íÎó";
-		$smarty->display("login.html");
+		$smarty->display("index.html");
 	}
 	//print_r($in_user);
 }
