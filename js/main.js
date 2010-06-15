@@ -17,6 +17,8 @@ $('#menu > ul > li > a').bind('click',function(){
 	if(this.id == "loginbutton"){
 		$('#htmlform2').hide();
 		$('#htmlform3').hide();
+		$('#htmlform4').hide();
+		$('#arrow4').hide();
 		$('#arrow3').hide();
 		$('#arrow2').hide();
 		$('#arrow1').slideToggle();
@@ -26,7 +28,9 @@ $('#menu > ul > li > a').bind('click',function(){
 	}
 	if(this.id == "regbutton"){
 		$('#htmlform1').hide();
-		$('#htmlform3').hide();	
+		$('#htmlform3').hide();
+		$('#htmlform4').hide();
+		$('#arrow4').hide();
 		$('#arrow3').hide();
 		$('#arrow1').hide();
 		$('#arrow2').slideToggle();
@@ -37,11 +41,25 @@ $('#menu > ul > li > a').bind('click',function(){
 	if(this.id == "helpbutton"){
 		$('#htmlform2').hide();
 		$('#htmlform1').hide();
+		$('#htmlform4').hide();
+		$('#arrow4').hide();
 		$('#arrow1').hide();
 		$('#arrow2').hide();
 		$('#arrow3').slideToggle();
 		//$('#htmlform1').slideToggle('slow');
 		$('#htmlform3').animate({opacity:'toggle',height:'toggle'},'slow');
+		//$(this).removeClass('active');
+	}
+	if(this.id == "pricebutton"){
+		$('#htmlform2').hide();
+		$('#htmlform1').hide();
+		$('#htmlform3').hide();
+		$('#arrow1').hide();
+		$('#arrow2').hide();
+		$('#arrow3').hide();
+		$('#arrow4').slideToggle();
+		//$('#htmlform1').slideToggle('slow');
+		$('#htmlform4').animate({opacity:'toggle',height:'toggle'},'slow');
 		//$(this).removeClass('active');
 	}
 });
@@ -51,6 +69,7 @@ $('.close').bind('click',function(){
 		$('#arrow1').hide();
 		$('#arrow2').hide();
 		$('#arrow3').hide();
+		$('#arrow4').hide();
 		$('#menu > ul > li > a').removeClass('active');	
 });
 
