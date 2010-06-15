@@ -31,11 +31,12 @@
 		<td align="left"><input name="email" type="text" value="{$email}" /></td>
 	</tr>
 	{if $regtime != ''}
-	{if $paytime == ''}
 	<tr>
 		<td align="right">注册时间：</td>
 		<td align="left">{$regtime}</td>
 	</tr>
+	{if $testpassword == ''}
+
 	<tr>
 		<td align="right">测试账号：</td>
 		<td align="left">test</td>
@@ -44,8 +45,7 @@
 		<td align="right">测试密码：</td>
 		<td align="left">{$testpassword}</td>
 	</tr>
-	{/if}
-	{/if}
+	{/if} {/if}
 	<input name="id" type="hidden" value="{$name}" />
 	{if $paytime != ''}
 	<tr>
@@ -73,10 +73,10 @@
 <table class="form">
 	<tr>
 		<td align="right" width="40%">选择付费（续费）时长：</td>
-		<td align="left"><input type="radio" name="paymonth" value="1" />1个月
-		<input type="radio" name="paymonth" value="3" />3个月 <input
-			type="radio" name="paymonth" value="6" />6个月 <input type="radio"
-			name="paymonth" value="12" />12个月</td>
+		<td align="left"><input type="radio" name="paymonth" value="1" />1个月(4.5￥)
+		<input type="radio" name="paymonth" value="3" />3个月 (13￥)<input
+			type="radio" name="paymonth" value="6" />半年(25￥)<input type="radio"
+			name="paymonth" value="12" />一年(45￥)</td>
 	</tr>
 	<input name="name" type="hidden" value="{$name}" />
 	<tr>
