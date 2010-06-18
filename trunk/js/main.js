@@ -72,5 +72,4 @@ $('.close').bind('click',function(){
 		$('#arrow4').hide();
 		$('#menu > ul > li > a').removeClass('active');	
 });
-
 });
