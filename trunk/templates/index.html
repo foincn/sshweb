@@ -12,236 +12,258 @@
 <title>翻墙 SSH代理 VPN代理 网页代理 高速美国主机代理</title>
 </head>
 <body>
-<div id="header"><a href="#" id="logo"></a></div>
+<div id="header"><a href="index.php" id="logo"></a></div>
 <div id="status_small" style="display: none"></div>
 <div id="status_large" style="display: none"></div>
 <div id="wrap">
-<div id="navigator">
-<div id="menu">
-<ul>
-	<li><a href="#" id="loginbutton"><span>登&nbsp;录</span></a></li>
-	<li><a href="#" id="regbutton"><span>注&nbsp;册</span></a></li>
-	<li><a href="#" id="helpbutton"><span><font color=red>购买疑问</font></span></a></li>
-	<li><a href="#" id="pricebutton"><span><font color=blue>购买费用</font></span></a></li>
-</ul>
-</div>
-<div id="arrow1" style="display: none"></div>
-<div id="arrow2" style="display: none"></div>
-<div id="arrow3" style="display: none"></div>
-<div id="arrow4" style="display: none"></div>
-<div id="htmlform1" style="display: none">
-<div id="diffform">
-<form name="myform" method="post" action="login.php" class="grey">
-<table>
-	<caption>用户登陆</caption>
-	<tr>
-		<td align="right" width="40%">用户名</td>
-		<td align="left"><input name="id" type="text" value=""
+  <div id="navigator">
+    <div id="menu">
+      <ul>
+        <li><a href="#" id="loginbutton"><span>登&nbsp;录</span></a></li>
+        <li><a href="#" id="regbutton"><span>注&nbsp;册</span></a></li>
+        <li><a href="#" id="helpbutton"><span><font color=red>购买疑问</font></span></a></li>
+        <li><a href="#" id="pricebutton"><span><font color=blue>购买费用</font></span></a></li>
+      </ul>
+    </div>
+    <div id="arrow1" style="display:none"></div>
+    <div id="arrow2" style="display: none"></div>
+    <div id="arrow3" style="display: none"></div>
+    <div id="arrow4" style="display:none"></div>
+    <div id="htmlform1" style="display: none">
+      <div id="diffform">
+        <form name="myform" method="post" action="login.php" class="grey">
+          <table>
+            <caption>
+            用户登陆
+            </caption>
+            <tr>
+              <td align="right" width="40%">用户名</td>
+              <td align="left"><input name="id" type="text" value=""
 			style="width: 150px" /></td>
-	</tr>
-	<tr>
-		<td align="right">密&nbsp;&nbsp;码</td>
-		<td align="left"><input name="pw" type="password" value=""
+            </tr>
+            <tr>
+              <td align="right">密&nbsp;&nbsp;码</td>
+              <td align="left"><input name="pw" type="password" value=""
 			style="width: 150px" /></td>
-	</tr>
-	<tr>
-		<td align="right">输入验证码：</td>
-		<td align="left"><input name="yz" type="text" value="" /><img src="yz.php" align="absmiddle" /></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td align="left"><input name="tijiao" type="submit" value=""
-			class="login" /> <a href="#" id="forgetpass">忘记密码？</a></td>
-	</tr>
-</table>
-</form>
-</div>
-<div class="close">&nbsp;&nbsp;&nbsp;</div>
-</div>
-</div>
-<div id="htmlform2" style="display: none">
-<div id="diffform">
-<form name="myform" method="post" action="reg.php" class="grey">
-<table>
-	<caption>用户注册</caption>
-	<tr align="center">
-		<td align="right" width="45%"><span style="color: #F00">*</span>用户名：</td>
-		<td align="left"><input name="id" type="text" value="" /></td>
-	</tr>
-	<tr>
-		<td align="right"><span style="color: #F00">*</span>登陆密码：</td>
-		<td align="left"><input name="pw" type="password" value="" /></td>
-	</tr>
-	<tr>
-		<td align="right"><span style="color: #F00">*</span>再次输入登陆密码：</td>
-		<td align="left"><input name="pw2" type="password" value="" /></td>
-	</tr>
-	<tr>
-		<td align="right">旺旺账号：</td>
-		<td align="left"><input name="taobao_name" type="text" value="" /></td>
-	</tr>
-	<tr>
-		<td align="right">QQ：</td>
-		<td align="left"><input name="qq" type="text" value="" /></td>
-	</tr>
-	<tr>
-		<td align="right">E-mail：</td>
-		<td align="left"><input name="email" type="text" value="" /></td>
-	</tr>
-			<tr>
-		<td align="right">输入验证码：</td>
-		<td align="left"><input name="yz" type="text" value="" /><img src="yz.php" align="absmiddle" /></td>
-	</tr>
-	<tr>
-		<td></td>
-		<td align="left"><input name="tijiao" type="submit" value=""
+            </tr>
+            <tr>
+              <td align="right">输入验证码</td>
+              <td align="left"><input name="yz" type="text" value="" />
+                <img src="yz.php" align="absmiddle" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="left"><input name="tijiao" type="submit" value=""
+			class="login" />
+                <a href="#" id="forgetpass">忘记密码？</a></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="close">&nbsp;&nbsp;&nbsp;</div>
+    </div>
+  </div>
+  <div id="htmlform2" style="display:none">
+    <div id="diffform">
+      <form name="myform" method="post" action="reg.php" class="grey">
+        <table>
+          <caption>
+          用户注册
+          </caption>
+          <tr align="center">
+            <td align="right" width="45%"><span style="color: #F00">*</span>用户名：</td>
+            <td align="left"><input name="id" type="text" value="" /></td>
+          </tr>
+          <tr>
+            <td align="right"><span style="color: #F00">*</span>登陆密码：</td>
+            <td align="left"><input name="pw" type="password" value="" /></td>
+          </tr>
+          <tr>
+            <td align="right"><span style="color: #F00">*</span>再次输入登陆密码：</td>
+            <td align="left"><input name="pw2" type="password" value="" /></td>
+          </tr>
+          <tr>
+            <td align="right">旺旺账号：</td>
+            <td align="left"><input name="taobao_name" type="text" value="" /></td>
+          </tr>
+          <tr>
+            <td align="right">QQ：</td>
+            <td align="left"><input name="qq" type="text" value="" /></td>
+          </tr>
+          <tr>
+            <td align="right">E-mail：</td>
+            <td align="left"><input name="email" type="text" value="" /></td>
+          </tr>
+          <tr>
+            <td align="right">输入验证码：</td>
+            <td align="left"><input name="yz" type="text" value="" />
+              <img src="yz.php" align="absmiddle" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td align="left"><input name="tijiao" type="submit" value=""
 			class="reg" /></td>
-	</tr>
-</table>
-</form>
-</div>
-<div class="close">&nbsp;&nbsp;&nbsp;</div>
-</div>
-<div id="htmlform3" style="display: none">
-<div id="diffform">
-<p>1,服务器稳定么？<br>
-答：我国到美国部分地区的出口确实会阶段性的出现问题。正是因为有此问题，我们现有四台服务器分布在美国国东西海岸成犄角之势，保证您时刻稳定的墙外生活。
-<br><br>2,服务器速度怎么样？
-<br>答：我看YOUTUBE反正是不卡，看广告不如看疗效，注册个用户试一下就OK了~
-<br><br>3,出墙教程在哪？
-<br>答：myentunnel+firefox的教程在
-<a href="http://blog.licess.org/myentunnel-firefox-foxyproxy-ssh/">这里</a>。
-myentunnel对速度有限制，如果您主要是看YOUTUBE的话建议换成tunnelier,教程在<a href="http://www.appinn.com/bitvise-tunnelier//">这里</a>
-<br><br>4,MAC系统怎么办？
-<br>答：使用ISSH+FIREFOX，教程在
-<a href="http://issh.us/viewthread.php?tid=2">这里</a>。
-<br><br>5,有其他疑问怎么办？
-<br>答：联系我吧！旺旺:kecker QQ:58287926 一般都在，欢迎来询~
-</p>
-</div>
-<div class="close">&nbsp;&nbsp;&nbsp;</div>
-</div>
-
-<div id="htmlform4" style="display: none">
-<div id="diffform">
-<p>
-
-<font color=blue size="5">
-人间遍种自由花！
-<br>注册即可得测试账号，测试满意再付费~每天一毛多，买一个等于买四个！
-<br>
-<br>一个月 4.5元
-<br>三个月  13元
-<br>六个月  25元
-<br>一年  &nbsp;&nbsp;45元</font>
-
-</p>
-</div>
-<div class="close">&nbsp;&nbsp;&nbsp;</div>
-</div>
-
-<div id="htmlform4" style="display: none">
-<div id="diffform">
-<form name="myform" method="post" action="change_status.php"
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="close">&nbsp;&nbsp;&nbsp;</div>
+  </div>
+  <div id="qanda" style="display:none">
+    <div id="qanda1">
+      <p class="q">1,服务器稳定么？</p>
+      <p>答：我国到美国部分地区的出口确实会阶段性的出现问题。正是因为有此问题，我们现有四台服务器分布在美国国东西海岸成犄角之势，保证您时刻稳定的墙外生活。</p>
+      <p class="q">2,服务器速度怎么样？</p>
+      <p>答：我看YOUTUBE反正是不卡，看广告不如看疗效，注册个用户试一下就OK了~</p>
+      <p class="q">3,出墙教程在哪？</p>
+      <p>答：myentunnel+firefox的教程在 <a href="http://blog.licess.org/myentunnel-firefox-foxyproxy-ssh/">这里</a>。
+        myentunnel对速度有限制，如果您主要是看YOUTUBE的话建议换成tunnelier,教程在<a href="http://www.appinn.com/bitvise-tunnelier//">这里</a></p>
+      <p class="q">4,MAC系统怎么办？</p>
+      <p>答：使用ISSH+FIREFOX，教程在 <a href="http://issh.us/viewthread.php?tid=2">这里</a>。</p>
+      <p class="q">5,有其他疑问怎么办？</p>
+      <p>答：联系我吧！旺旺:kecker QQ:58287926 一般都在，欢迎来询~</p>
+    </div>
+    <div class="close">&nbsp;&nbsp;&nbsp;</div>
+  </div>
+  <div id="price" style="display:none">
+    <div id="price1">
+      <p><span style="color:#00F">人间遍种自由花!</span></p>
+      <p>注册即可得测试账号，测试满意再付费~</p>
+      <p><b>每天一毛多，买一个等于买四个！</b></p>
+      <table>
+        <tr>
+          <td>一个月</td>
+          <td>4.5元</td>
+        </tr>
+        <tr>
+          <td>三个月</td>
+          <td>13元</td>
+        </tr>
+        <tr>
+          <td>六个月</td>
+          <td>25元 </td>
+        </tr>
+        <tr>
+          <td>一年</td>
+          <td>45元</td>
+        </tr>
+      </table>
+    </div>
+    <div class="close">&nbsp;&nbsp;&nbsp;</div>
+  </div>
+  <div id="htmlform4" style="display: none">
+    <div id="diffform">
+      <form name="myform" method="post" action="change_status.php"
 	class="grey">
-<table>
-	<caption>用户信息</caption>
-	<tr>
-		<td align="right" width="45%">用户名：</td>
-		<td align="left">{$name}</td>
-	</tr>
-	<tr>
-		<td align="right">密码：</td>
-		<td align="left"><input name="pw" type="text" value="{$password}" /></td>
-	</tr>
-	<tr>
-		<td align="right">旺旺账号：</td>
-		<td align="left"><input name="taobao_name" type="text"
+        <table>
+          <caption>
+          用户信息
+          </caption>
+          <tr>
+            <td align="right" width="45%">用户名：</td>
+            <td align="left">{$name}</td>
+          </tr>
+          <tr>
+            <td align="right">密码：</td>
+            <td align="left"><input name="pw" type="text" value="{$password}" /></td>
+          </tr>
+          <tr>
+            <td align="right">旺旺账号：</td>
+            <td align="left"><input name="taobao_name" type="text"
 			value="{$taobao_name}" /></td>
-	</tr>
-	<tr>
-		<td align="right">QQ：</td>
-		<td align="left"><input name="qq" type="text" value="{$qq}" /></td>
-	</tr>
-	<tr>
-		<td align="right">E-mail：</td>
-		<td align="left"><input name="email" type="text" value="{$email}" /></td>
-	</tr>
-	<input name="id" type="hidden" value="{$name}" />
-	<tr>
-		<td align="right">订购时间：</td>
-		<td align="left">{$paytime}</td>
-	</tr>
-	<tr>
-		<td align="right">到期时间：</td>
-		<td align="left">{$overtime}</td>
-	</tr>
-	<tr>
-		<td></td>
-		<td align="left"><input name="tijiao" type="submit" value=""
+          </tr>
+          <tr>
+            <td align="right">QQ：</td>
+            <td align="left"><input name="qq" type="text" value="{$qq}" /></td>
+          </tr>
+          <tr>
+            <td align="right">E-mail：</td>
+            <td align="left"><input name="email" type="text" value="{$email}" /></td>
+          </tr>
+          <input name="id" type="hidden" value="{$name}" />
+          <tr>
+            <td align="right">订购时间：</td>
+            <td align="left">{$paytime}</td>
+          </tr>
+          <tr>
+            <td align="right">到期时间：</td>
+            <td align="left">{$overtime}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td align="left"><input name="tijiao" type="submit" value=""
 			class="modify" /></td>
-	</tr>
-</table>
-</form>
-<form name="pay" method="post" action="alipay/enter.php" class="grey">
-<table>
-	<tr>
-		<td width="45%" rowspan="2" align="right">选择付费（续费）时长：</td>
-		<td align="left"><input type="radio" name="paymonth" value="1" />
-		1个月 <input type="radio" name="paymonth" value="3" /> 3个月</td>
-	</tr>
-	<tr>
-		<td align="left"><input type="radio" name="paymonth" value="6" />
-		6个月 <input type="radio" name="paymonth" value="12" /> 12个月</td>
-	</tr>
-	<input name="name" type="hidden" value="{$name}" />
-	<tr>
-		<td></td>
-		<td align="left"><input type="submit" value="" class="pay" /></td>
-	</tr>
-</table>
-</form>
+          </tr>
+        </table>
+      </form>
+      <form name="pay" method="post" action="alipay/enter.php" class="grey">
+        <table>
+          <tr>
+            <td width="45%" rowspan="2" align="right">选择付费（续费）时长：</td>
+            <td align="left"><input type="radio" name="paymonth" value="1" />
+              1个月
+              <input type="radio" name="paymonth" value="3" />
+              3个月</td>
+          </tr>
+          <tr>
+            <td align="left"><input type="radio" name="paymonth" value="6" />
+              6个月
+              <input type="radio" name="paymonth" value="12" />
+              12个月</td>
+          </tr>
+          <input name="name" type="hidden" value="{$name}" />
+          <tr>
+            <td></td>
+            <td align="left"><input type="submit" value="" class="pay" /></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="close">&nbsp;&nbsp;&nbsp;</div>
+  </div>
+  <div id="content">
+    <div id="slide">
+      <h3><font color=blue>现在注册即可得三天免费试用账号</font>，试试看不卡壳的YOUTUBE吧~！<br>
+        服务水平大升级！<font color=blue>账号可以在4个不同的服务器上使用</font>，且机房贯穿美国东西部，您可以选择您用着最快的！ <br>
+        现有服务器: <br>
+        ssh1.fan-qiang.com (洛杉矶，<font color=red>推荐</font>) <br>
+        ssh2.fan-qiang.com (宾西法尼亚) <br>
+        ssh3.fan-qiang.com (宾西法尼亚) <br>
+        ssh6.fan-qiang.com (奥兰多，<font color=red>推荐</font>) <br>
+        您可以使用fan-qiang.com自助购买续费，全部自动发货！ </h3>
+      <div id="preFeature2" style="border: 5px solid #666">
+        <div><img src="images/twitter.jpg" alt="twitter snapshot" />
+          <p>想上twitter看看您喜欢的明星天天在干什么嘛？</p>
+          <!--a href="http://www.yahoo.com">Link #1</a-->
+        </div>
+        <div><img src="images/facebook.jpg" alt="facebook snapshot" />
+          <p>想上facebook上认识外国的朋友嘛？</p>
+          <!--a href="http://www.google.com">Link #2</a-->
+        </div>
+        <div><img src="images/youtube.jpg" alt="youtube snapshot" />
+          <p>想去youtube上看全球各地的朋友上传的有趣的片子嘛？</p>
+          <!--a href="#">Link #3</a-->
+        </div>
+        <div><img src="images/picasa.jpg" alt="picasa snapshot" />
+          <p>想上picasa看看出国留学的哥们儿分享的照片嘛？？</p>
+          <!--a href="#">Link #4</a-->
+        </div>
+      </div>
+    </div>
+    <div id="webproxy">
+      <h3>网页代理入口
+        <form action="http://ssh1.fan-qiang.com/sshweb/webproxy/includes/process.php?action=update" method="post"
+	class="form">
+          <input type="text" name="u" id="input" size="30"
+	class="textbox">
+          <input type="submit" value="Go" class="button">
+        </form>
+      </h3>
+    </div>
+  </div>
 </div>
-<div class="close">&nbsp;&nbsp;&nbsp;</div>
-</div>
-<div id="content">
-<div id="slide">
-<h3><font color=blue>现在注册即可得三天免费试用账号</font>，试试看不卡壳的YOUTUBE吧~！<br>服务水平大升级！<font color=blue>账号可以在4个不同的服务器上使用</font>，且机房贯穿美国东西部，您可以选择您用着最快的！
- 
-<br>现有服务器: 
-<br>ssh1.fan-qiang.com (洛杉矶，<font color=red>推荐</font>) 
-<br>ssh2.fan-qiang.com (宾西法尼亚) 
-<br>ssh3.fan-qiang.com (宾西法尼亚) 
-<br>ssh6.fan-qiang.com (奥兰多，<font color=red>推荐</font>) 
-<br>您可以使用fan-qiang.com自助购买续费，全部自动发货！
-</h3>
-<div id="preFeature2" style="border: 5px solid #666">
-<div><img src="images/twitter.jpg" alt="twitter snapshot" />
-<p>想上twitter看看您喜欢的明星天天在干什么嘛？</p>
-<!--a href="http://www.yahoo.com">Link #1</a--></div>
-<div><img src="images/facebook.jpg" alt="facebook snapshot" />
-<p>想上facebook上认识外国的朋友嘛？</p>
-<!--a href="http://www.google.com">Link #2</a--></div>
-<div><img src="images/youtube.jpg" alt="youtube snapshot" />
-<p>想去youtube上看全球各地的朋友上传的有趣的片子嘛？</p>
-<!--a href="#">Link #3</a--></div>
-<div><img src="images/picasa.jpg" alt="picasa snapshot" />
-<p>想上picasa看看出国留学的哥们儿分享的照片嘛？？</p>
-<!--a href="#">Link #4</a--></div>
-</div>
-</div>
-<div id="webproxy">
-<h3>网页代理入口
-<form action="http://ssh1.fan-qiang.com/sshweb/webproxy/includes/process.php?action=update" method="post"
-	class="form"><input type="text" name="u" id="input" size="30"
-	class="textbox"><input type="submit" value="Go" class="button"></form>
-</h3>
-</div>
-</div>
-</div>
-
 <div id="bottom">
-<p>Copyright：fan-qiang.com</p>
+  <p>Copyright：fan-qiang.com</p>
 </div>
 <script language="javascript" type="text/javascript" src="http://js.users.51.la/3904713.js"></script>
 <noscript><a href="http://www.51.la/?3904713" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/3904713.asp" style="border:none" /></a></noscript>

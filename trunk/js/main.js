@@ -16,50 +16,50 @@ $('#menu > ul > li > a').bind('click',function(){
 	$(this).addClass('active');
 	if(this.id == "loginbutton"){
 		$('#htmlform2').hide();
-		$('#htmlform3').hide();
-		$('#htmlform4').hide();
+		$('#qanda').hide();
+		$('#price').hide();
 		$('#arrow4').hide();
 		$('#arrow3').hide();
 		$('#arrow2').hide();
 		$('#arrow1').slideToggle();
-		//$('#htmlform1').slideToggle('slow');
-		$('#htmlform1').animate({opacity:'toggle',height:'toggle'},'slow');
+		//$('#arrorw1').css({'top':'0px','left':'70px','background-color':'black'});
+		$('#htmlform1').animate({opacity:'toggle',height:'toggle'},'fast');
 		//$(this).removeClass('active');
 	}
 	if(this.id == "regbutton"){
 		$('#htmlform1').hide();
-		$('#htmlform3').hide();
-		$('#htmlform4').hide();
+		$('#qanda').hide();
+		$('#price').hide();
 		$('#arrow4').hide();
 		$('#arrow3').hide();
 		$('#arrow1').hide();
-		$('#arrow2').slideToggle();
+		$('#arrow2').slideToggle('fast');
 		//$('#htmlform1').slideToggle('slow');
-		$('#htmlform2').animate({opacity:'toggle',height:'toggle'},'slow');
+		$('#htmlform2').animate({opacity:'toggle',height:'toggle'},'fast');
 		//$(this).removeClass('active');
 	}
 	if(this.id == "helpbutton"){
 		$('#htmlform2').hide();
 		$('#htmlform1').hide();
-		$('#htmlform4').hide();
+		$('#price').hide();
 		$('#arrow4').hide();
 		$('#arrow1').hide();
 		$('#arrow2').hide();
-		$('#arrow3').slideToggle();
+		$('#arrow3').slideToggle('fast');
 		//$('#htmlform1').slideToggle('slow');
-		$('#htmlform3').animate({opacity:'toggle',height:'toggle'},'slow');
+		$('#qanda').animate({opacity:'toggle',height:'toggle'},'fast');
 		//$(this).removeClass('active');
 	}
 	if(this.id == "pricebutton"){
 		$('#htmlform2').hide();
 		$('#htmlform1').hide();
-		$('#htmlform3').hide();
+		$('#qanda').hide();
 		$('#arrow1').hide();
 		$('#arrow2').hide();
 		$('#arrow3').hide();
-		$('#arrow4').slideToggle();
+		$('#arrow4').slideToggle('fast');
 		//$('#htmlform1').slideToggle('slow');
-		$('#htmlform4').animate({opacity:'toggle',height:'toggle'},'slow');
+		$('#price').animate({opacity:'toggle',height:'toggle'},'fast');
 		//$(this).removeClass('active');
 	}
 });
@@ -72,6 +72,5 @@ $('.close').bind('click',function(){
 		$('#arrow4').hide();
 		$('#menu > ul > li > a').removeClass('active');	
 });
-
 
 });
