@@ -151,7 +151,7 @@ h3 {
 	background:#e2e1e2 url(../images/form-bg.gif) top repeat-x;
 	border:1px #CCC solid;
 	border-top:none;
-	width:400px;
+	width:440px;
 	height:200px;
 	margin-top:-2px;
 	_margin-top:-6px;
@@ -163,7 +163,7 @@ h3 {
 	background:#e2e1e2 url(../images/form-bg.gif) top repeat-x;
 	border:1px #CCC solid;
 	border-top:none;
-	width:400px;
+	width:440px;
 	height:360px;
 	margin-top:-2px;
 	_margin-top:-6px;
@@ -251,7 +251,7 @@ h3 {
 	cursor:pointer;
 	float:right;
 }
-#diffform {
+.diffform {
 	margin-right:20px;
 	float:left;
 }
