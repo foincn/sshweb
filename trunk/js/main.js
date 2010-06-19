@@ -72,4 +72,15 @@ $('.close').bind('click',function(){
 		$('#arrow4').hide();
 		$('#menu > ul > li > a').removeClass('active');	
 });
+//ÊäÈë¿ò¾Û½¹
+var s = $('#inputurl').val();
+$('#inputurl').click(function(){
+		if($(this).val() === s){
+			$(this).val('');
+		}
+		$(this).css({color:"#000"});
+});
+$('#inputurl').blur(function(){
+		$(this).css({color:"#999"});
+ });
 });
