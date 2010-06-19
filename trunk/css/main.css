@@ -164,7 +164,7 @@ h3 {
 	border:1px #CCC solid;
 	border-top:none;
 	width:450px;
-	height:360px;
+	height:380px;
 	margin-top:-2px;
 	_margin-top:-6px;
 	padding:10px;
@@ -323,6 +323,7 @@ table td {
 	width:70px;
 	height:32px;
 	border:none;
+	cursor:pointer;
 }
 #forgetpass {
 	font-size:110%;
@@ -334,20 +335,41 @@ table td {
 	width:70px;
 	height:32px;
 	border:none;
+	cursor:pointer;
 }
 .pay {
 	background:url(../images/pay.gif) no-repeat;
 	width:70px;
 	height:32px;
 	border:none;
+	cursor:pointer;
 }
 .modify {
 	background:url(../images/modify.gif) no-repeat;
 	width:70px;
 	height:32px;
 	border:none;
+	cursor:pointer;
 }
 
 .textbox {
 	color:#999;
+}
+
+#status_small{
+	margin:0 auto;
+	height:20px;
+	width:600px;
+	background:#CCF;
+	text-align:right;
+}
+.errormsg{
+	color:#F00;
+	font-size:90%;
+	background:#FF9;
+}
+.warningmsg{
+	color:#0F0;
+	font-size:90%;
+	background:#FF9;
 }
