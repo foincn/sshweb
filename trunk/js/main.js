@@ -1,6 +1,6 @@
 // JavaScript Document
 jQuery.fn.checkform = function (input_type, required){
-	var id = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+	var id = /^\w+[\d\w_]{4,20}/;
 	var pw = /.{6,14}/;
 	var yz = /^\d{4}$/;
 	var email = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
