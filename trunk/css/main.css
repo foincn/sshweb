@@ -373,3 +373,21 @@ table td {
 	font-size:90%;
 	background:#FF9;
 }
+.Section1{
+	text-align:left;
+	padding:8px;
+}
+.Section1 h4{
+	padding:10px;
+}
+.helpcontent{
+	padding:4px;
+	text-indent:32px;
+	vertical-align:middle;
+	line-height:20px;
+	font-size:110%;
+}
+.helpimg{
+	padding:4px;
+	text-align:center;
+}
