@@ -164,11 +164,12 @@ h3 {
 	border:1px #CCC solid;
 	border-top:none;
 	width:450px;
-	height:380px;
+	height:400px;
 	margin-top:-2px;
 	_margin-top:-6px;
 	padding:10px;
 	margin-left:20px;
+	text-align:left;
 }
 #htmlform3 {
 	clear:left;
