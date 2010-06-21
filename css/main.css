@@ -392,3 +392,10 @@ table td {
 	padding:4px;
 	text-align:center;
 }
+#fixed {
+	background:url(../images/back.png) no-repeat left;
+	position:absolute;
+	top:110px;
+	margin-left:600px;
+	padding-left:20px;
+}
