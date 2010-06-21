@@ -218,7 +218,7 @@ $('#inputurl').blur(function(){
 		$(this).css({color:"#999"});
  });
 /*—È÷§*/
-	$("#htmlform1 input[name='id']").blur(function(){$(this).checkform('id',true);});
+	$("#htmlform1 input[name='id']").blur(function(){$(this).checkform('',true);});
 	$("#htmlform1 input[name='pw']").blur(function(){$(this).checkform('pw',true);});
 	$("#htmlform1 input[name='yz']").blur(function(){$(this).checkform('yz',true);});
 
@@ -237,7 +237,7 @@ $('#inputurl').blur(function(){
 	
 
 $("#htmlform1 form").submit(function(){
-	if($("#htmlform1 input[name='id']").checkform('id',true) && 
+	if($("#htmlform1 input[name='id']").checkform('',true) && 
 	   $("#htmlform1 input[name='pw']").checkform('pw',true) &&	
 	   $("#htmlform1 input[name='yz']").checkform('yz',true)){ 
 		$("#htmlform1 form").submit();
