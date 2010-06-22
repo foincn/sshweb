@@ -22,7 +22,7 @@ if ($_SESSION ["name"] != $name) {
 		$opts = array('http'=>array('method'=>"GET",'timeout'=>2));
 		$context = stream_context_create($opts);
 		foreach ($servers as $server){
-			$url = "http://$server:9999/cgi-bin/system_adduser.cgi?name=$name&pass=$pass";
+			$url = "http://$server:9999/cgi-bin/system_adduser.cgi?name=$name&pass=$pass&date=".$in_user ['overtime'];
 			@file_get_contents($url,false,$context);
 		}
 	}
