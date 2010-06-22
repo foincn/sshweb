@@ -1,6 +1,6 @@
 // JavaScript Document
 jQuery.fn.checkform = function (input_type, required){
-	var id = /^\w+[\d\w_]{4,20}/;
+	var id = /^\w+[\d\w_]{3,20}/;
 	var pw = /.{6,14}/;
 	var yz = /^\d{4}$/;
 	var email = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
@@ -219,7 +219,7 @@ $('#inputurl').blur(function(){
  });
 /*—È÷§*/
 	$("#htmlform1 input[name='id']").blur(function(){$(this).checkform('',true);});
-	$("#htmlform1 input[name='pw']").blur(function(){$(this).checkform('pw',true);});
+	$("#htmlform1 input[name='pw']").blur(function(){$(this).checkform('',true);});
 	$("#htmlform1 input[name='yz']").blur(function(){$(this).checkform('yz',true);});
 
 	$("#htmlform2 input[name='id']").blur(function(){$(this).checkform('id',true);});
@@ -238,7 +238,7 @@ $('#inputurl').blur(function(){
 
 $("#htmlform1 form").submit(function(){
 	if($("#htmlform1 input[name='id']").checkform('',true) && 
-	   $("#htmlform1 input[name='pw']").checkform('pw',true) &&	
+	   $("#htmlform1 input[name='pw']").checkform('',true) &&	
 	   $("#htmlform1 input[name='yz']").checkform('yz',true)){ 
 		$("#htmlform1 form").submit();
 	}
