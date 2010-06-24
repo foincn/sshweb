@@ -339,10 +339,11 @@ table td {
 	cursor:pointer;
 }
 .pay {
-	background:url(../images/pay.gif) no-repeat;
-	width:70px;
+	/*background:url(../images/pay.gif) no-repeat;*/
+	width:150px;
 	height:32px;
-	border:none;
+	border:1px solid #666;
+	font-size:120%;
 	cursor:pointer;
 }
 .modify {
