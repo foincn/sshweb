@@ -81,20 +81,20 @@ if ($verify_result) { //认证合格
 			$r = substr ( $pay_date, 8, 2 ); //日
 			$y = substr ( $pay_date, 5, 2 ); //月
 			$n = substr ( $pay_date, 0, 4 ); //年
-			$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add + 1, $r, $n ) );
+			$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add, $r + 1, $n ) );
 		
 		} else {
 			if (date ( "Y-m-d", strtotime ( $in_user ['overtime'] ) ) > date ( "Y-m-d" )) {
 				$r = substr ( $in_user ['overtime'], 8, 2 ); //日
 				$y = substr ( $in_user ['overtime'], 5, 2 ); //月
 				$n = substr ( $in_user ['overtime'], 0, 4 ); //年
-				$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add + 1, $r, $n ) );
+				$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add, $r + 1, $n ) );
 				///echo "Y";
 			} else {
 				$r = substr ( $pay_date, 8, 2 ); //日
 				$y = substr ( $pay_date, 5, 2 ); //月
 				$n = substr ( $pay_date, 0, 4 ); //年
-				$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add + 1, $r, $n ) );
+				$end_date = date ( "Y-m-d", mktime ( 0, 0, 0, $y + $add, $r + 1, $n ) );
 				//echo "N";
 			}
 		}
