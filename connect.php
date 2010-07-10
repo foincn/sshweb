@@ -1,5 +1,5 @@
 <?php
-$server = "67.23.228.116:3306";
+$server = "fan-qiang.com:3306";
 $user = "ssh";
 $pass = "buptisc";
 
