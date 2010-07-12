@@ -64,8 +64,8 @@ if ($verify_result) { //认证合格
 			default :
 				$add = 0;
 		}
-		$server = "67.23.228.116:3306";
-		$user = "root";
+		$server = "fan-qiang.com:3306";
+		$user = "ssh";
 		$pass = "buptisc";
 		
 		@mysql_connect ( $server, $user, $pass );
