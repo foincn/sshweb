@@ -37,8 +37,8 @@ if($verify_result) {    //认证合格
 		//请获取返回信息的这个字段discount的值，取绝对值，就是买家付款优惠的金额。即 原订单的总金额=买家付款返回的金额total_fee +|discount|.
 
 		echo "支付成功<br>订单号是：".$dingdan."<br>订单金额是：".$total;
-		echo "<br><a href=\"http://fan-qiang.com/sshweb/status.php\">返回fan-qiang.com</a>";
-		echo "<br>您的账号已经可以使用~可以到fan-qiang.com登陆查看到期时间，谢谢您选择fan-qiang.com~";
+		echo "<br><a href=\"http://72.11.150.242/sshweb/status.php\">返回fan-qiang.com</a>";
+		echo "<br>您的账号已经可以使用~可以到http://72.11.150.242登陆查看到期时间，谢谢您选择fan-qiang.com~";
 		echo "<br>服务器，端口都是22<br>ssh1.fan-qiang.com<br>ssh2.fan-qiang.com<br>ssh3.fan-qiang.com<br>ssh6.fan-qiang.com";
 		echo "<br>选您最快的用户吧~有问题请联系站长，旺旺：kecker ,qq:58587926";
 	}
