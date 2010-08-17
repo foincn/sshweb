@@ -31,8 +31,12 @@ if ($pass2 == '') {
 			$date = date ( "Y-m-d" );
 			$sql = "insert into `user` values (default , '$name' , '$pass2' , null ,null,'$taobao_name','$qq','$email','0','$date')";
 			$result = mysql_query ( $sql ) or die ( "wrong:" . mysql_error () );
+			$_SESSION ['name'] = $name;
+			/*
 			echo "注册成功";
 			$smarty->display ( "index.html" );
+*/
+			header ( "Location:status.php?method=reg" );
 		}
 	} else {
 		echo "有相同的用户名存在";

@@ -33,7 +33,8 @@ if ($in_user ['regtime'] == $today || $in_user ['regtime'] == $yestoday || $in_u
 	$test = mysql_fetch_array ( $result );
 	$smarty->assign ( "testpassword", $test ['password'] );
 }
-
+if($_GET[method] == 'reg')
+echo "<font color=red>注册成功！！并已登陆进系统</font>";
 $smarty->display ( "status.html" );
 
 //print_r($in_user);
