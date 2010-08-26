@@ -277,13 +277,13 @@ table {
 }
 table caption {
 	background:#069;
-	padding:8px;
+	padding:4px 8px 4px 8px;
 	font-size:110%;
 	font-weight:bold;
 	color:#FFF;
 }
 table td {
-	padding: 8px;
+	padding: 4px 8px 4px 8px;
 }
 .form {
 	width:500px;
@@ -310,14 +310,14 @@ table td {
 }
 .grey table caption {
 	background:none;
-	padding:8px;
+	padding:4px 8px 4px 8px;
 	font-size:130%;
 	color:#000;
 	text-align:left;
 	font-weight:normal;
 }
 .grey table td {
-	padding: 8px;
+	padding: 4px 8px 4px 8px;
 }
 .login {
 	background:url(../images/login.gif) no-repeat;
