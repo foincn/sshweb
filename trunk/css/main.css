@@ -400,3 +400,9 @@ table td {
 	margin-left:600px;
 	padding-left:20px;
 }
+#helplink {
+	background:url(../images/help.png) no-repeat left;
+	margin-left:500px;
+	padding-left:20px;
+	font-size:105%;
+}
