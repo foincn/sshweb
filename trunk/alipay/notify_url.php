@@ -65,7 +65,7 @@ if ($verify_result) { //认证合格
 			default :
 				$add = 0;
 		}
-		$server = "72.11.150.242:3306";
+		$server = "67.23.235.156:3306";
 		$user = "ssh";
 		$pass = "buptisc";
 		
