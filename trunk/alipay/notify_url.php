@@ -112,7 +112,7 @@ if ($verify_result) { //认证合格
 			$url = "http://$server:9999/cgi-bin/system_adduser.cgi?name=$receive_user&pass=".$in_user['password']."&date=$end_date";
 			@file_get_contents ( $url );
 		}
-		@exec("../../fetion/fx/sms alipay::::$receive_user",$ret);
+		//@exec("../../fetion/fx/sms alipay::::$receive_user",$ret);
 		
 		
 		
