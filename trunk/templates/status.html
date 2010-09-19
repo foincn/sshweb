@@ -15,6 +15,17 @@
       <caption>
       用户信息
       </caption>
+      {if $paytime == ''}
+      {if $testpassword != ''}
+      <tr>
+        <td align="right">测试账号：</td>
+        <td align="left">test</td>
+      </tr>
+      <tr>
+        <td align="right">测试密码：</td>
+        <td align="left">{$testpassword}（可能每日一变，登陆可查）</td>
+      </tr>
+      {/if} {/if}
       <tr>
         <td align="right" width="40%">用户名：</td>
         <td align="left">{$name}</td>
@@ -41,17 +52,7 @@
         <td align="right">注册时间：</td>
         <td align="left">{$regtime}</td>
       </tr>
-      {if $paytime == ''}
-      {if $testpassword != ''}
-      <tr>
-        <td align="right">测试账号：</td>
-        <td align="left">test</td>
-      </tr>
-      <tr>
-        <td align="right">测试密码：</td>
-        <td align="left">{$testpassword}（可能每日一变，登陆可查）</td>
-      </tr>
-      {/if} {/if} {/if}
+       {/if}
       <input name="id" type="hidden" value="{$name}" />
       {if $paytime != ''}
       <tr>
