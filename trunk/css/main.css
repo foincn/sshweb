@@ -406,3 +406,10 @@ table td {
 	padding-left:20px;
 	font-size:105%;
 }
+
+.focus {
+	width:600px;
+	margin:0 auto;
+	background:#F0E68C;
+	font-weight:bold;
+}

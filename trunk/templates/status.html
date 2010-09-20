@@ -15,17 +15,6 @@
       <caption>
       用户信息
       </caption>
-      {if $paytime == ''}
-      {if $testpassword != ''}
-      <tr>
-        <td align="right">测试账号：</td>
-        <td align="left">test</td>
-      </tr>
-      <tr>
-        <td align="right">测试密码：</td>
-        <td align="left">{$testpassword}（可能每日一变，登陆可查）</td>
-      </tr>
-      {/if} {/if}
       <tr>
         <td align="right" width="40%">用户名：</td>
         <td align="left">{$name}</td>
@@ -64,51 +53,66 @@
         <td align="left">{$overtime}</td>
       </tr>
       {/if}
-      <tr>
-        <td align="left" style="font-size:110%">可用服务器：</td>
-      </tr>
-      <tr>
-        <td align="right">服务器1：</td>
-        <td align="left">1.ssh0.com (洛杉矶，推荐)</td>
-      </tr>
-      <tr>
-        <td align="right">服务器2：</td>
-        <td align="left">2.ssh0.com (宾西法尼亚)</td>
-      </tr>
-      <tr>
-        <td align="right">服务器3：</td>
-        <td align="left">3.ssh0.com (宾西法尼亚)</td>
-      </tr>
-      <tr>
-        <td align="right">服务器4：</td>
-        <td align="left">6.ssh0.com (奥兰多，推荐)</td>
-      </tr>
-
-      <tr>
+	  <tr>
         <td></td>
         <td align="left"><input name="tijiao" type="submit" value=""
 			class="modify" /></td>
       </tr>
+	  </table>
+	 </form>
+	 <table class="focus" style="border:none">
+	  {if $paytime == ''}
+      {if $testpassword != ''}
+      <tr>
+		<td align="right" rowspan="2" width="22%" style="font-size:140%;color:#8B0000">开始体验！</td>
+        <td align="right"width="19%">测试账号：</td>
+        <td align="left">test</td>
+      </tr>
+      <tr>
+        <td align="right">测试密码：</td>
+        <td align="left">{$testpassword}（可能每日一变，登陆可查）</td>
+      </tr>
+      {/if} {/if}
+	  </table>
+	  <table class="form" style="border:none">
+      <tr>
+	    <td align="right" style="font-size:130%" rowspan="4" width="40%">可用服务器：</td>
+        <td align="left">1.ssh0.com (洛杉矶，推荐)</td>
+      </tr>
+      <tr>
+        <td align="left">2.ssh0.com (宾西法尼亚)</td>
+      </tr>
+      <tr>
+        <td align="left">3.ssh0.com (宾西法尼亚)</td>
+      </tr>
+      <tr>
+        <td align="left">6.ssh0.com (奥兰多，推荐)</td>
+      </tr>
+	</table>
+ 
       <!--tr>
 		<a href="alipay/enter.php?name={$name}&yue=10">付费</a>
 	</tr-->
     </table>
-  </form>
+
   <form name="pay" method="post" action="alipay/enter.php" class="grey">
     <table class="form">
       <tr>
-        <td align="left" width="40%" style="font-size:110%">选择付费（续费）时长：</td>
+        <td align="right" width="40%" style="font-size:110%" rowspan="4">选择付费（续费）时长：</td>
         <td align="left"><input type="radio" name="paymonth" value="1" />
-          1个月 (4.5￥)<br>
+          1个月 (4.5￥)
+		  <tr>
+		  <td>
           <input type="radio" name="paymonth" value="3" />
-          3个月 (13￥)<br>
+          3个月 (13￥)</td></tr>
+		  <tr><td>
           <input
 			type="radio" name="paymonth" value="6" />
-          6个月  (25￥)<br>
+          6个月  (25￥)</td></tr>
+		  <tr><td>
           <input type="radio"
 			name="paymonth" value="12" />
-          12个月(45￥)</td>
-      </tr>
+          12个月(45￥)</td></tr>
       <input name="name" type="hidden" value="{$name}" />
       <tr>
         <td align="right"><img src="images/logo-alipay-t.png" width="96" height="37" /></td>
