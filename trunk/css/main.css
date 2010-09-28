@@ -413,3 +413,31 @@ table td {
 	background:#F0E68C;
 	font-weight:bold;
 }
+
+#bar  td{
+	background:#fff;
+}
+.black{background:#000}
+.tip{ 
+	width:220px;
+	height:80px;
+	position:absolute;
+
+}
+.p{ margin-top:30px;
+	width:0;
+	height:0;
+	overflow:hidden;
+	display:block;
+	border:10px solid #F0E68C;
+	border-color:#ebeaea #F0E68C #ebeaea #ebeaea;
+	float:left;
+	}
+.c{	padding:20px;
+	float:right;
+	width:160px;
+	height:40px;
+	background:#F0E68C;
+	color:#8b0000;
+}
+.hide {display:none}

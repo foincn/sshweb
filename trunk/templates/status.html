@@ -16,7 +16,7 @@
       用户信息
       </caption>
       <tr>
-        <td align="right" width="40%">用户名：</td>
+        <td align="right" width="40%" id="n">用户名：</td>
         <td align="left">{$name}</td>
       </tr>
       <tr>
@@ -49,7 +49,7 @@
         <td align="left">{$paytime}</td>
       </tr>
       <tr>
-        <td align="right">到期时间：</td>
+        <td align="right" id="f">到期时间：</td>
         <td align="left">{$overtime}</td>
       </tr>
       {/if}
@@ -116,7 +116,7 @@
       <input name="name" type="hidden" value="{$name}" />
       <tr>
         <td align="right"><img src="images/logo-alipay-t.png" width="96" height="37" /></td>
-        <td align="left"><input type="submit" value="支付宝担保支付"  class="pay"/></td>
+        <td align="left" id="s"><input type="submit" value="支付宝担保支付"  class="pay"/></td>
       </tr>
     </table>
   </form>
@@ -131,7 +131,11 @@
       </tr>
       
 </div>
-
+<div class="tip hide">
+<div class="p"></div>
+<div class="c hide" id="paid"><b>已付款，您的登录用户名和密码就是SSH的用户名密码</b>。</div>
+<div class="c hide" id="notpaid"><b>付款后，您的登录用户名和密码就是SSH的用户名密码</b>。</div>
+</div>
 </body>
 <script language="javascript" src="js/status.js"></script>
 <script language="javascript" type="text/javascript" src="http://js.users.51.la/3904713.js"></script>
