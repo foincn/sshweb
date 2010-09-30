@@ -1,11 +1,13 @@
 $(document).ready(function() {
 	$("form[name='pay']").submit(function(){
+		$('.tip').hide();
 		//return false;
 	if($(":radio:checked").val() == undefined){
 			if(!$(".pay").next().is("span")){
 				$(".pay").after("<span class='errormsg'>ÇëÑ¡ÔñÒ»Ïî</span>");
 				return false;
 			}
+			return false;
 	}
 	else{
 		$("form[name='pay']").submit();
