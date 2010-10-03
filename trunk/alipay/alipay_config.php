@@ -19,8 +19,8 @@ $seller_email   = "kecker.d2@gmail.com";       //卖家支付宝帐户
 $_input_charset = "GBK";  //字符编码格式  目前支持 GBK 或 utf-8
 $sign_type      = "MD5";    //加密方式  系统默认(不要修改)
 $transport      = "http";  //访问模式,你可以根据自己的服务器是否支持ssl访问而选择http以及https访问模式
-$notify_url     = "http://67.23.235.156/sshweb/alipay/notify_url.php"; //交易过程中服务器通知的页面 要用 http://格式的完整路径
-$return_url     = "http://67.23.235.156/sshweb/alipay/return_url.php"; //付完款后跳转的页面 要用 http://格式的完整路径
+$notify_url     = "http://ssh0.com/sshweb/alipay/notify_url.php"; //交易过程中服务器通知的页面 要用 http://格式的完整路径
+$return_url     = "http://ssh0.com/sshweb/alipay/return_url.php"; //付完款后跳转的页面 要用 http://格式的完整路径
 $show_url       = "http://ssh0.com/"        //你网站商品的展示地址
 
 /** 提示：如何获取安全校验码和合作ID
