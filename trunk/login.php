@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html; charset=gbk");
 include_once ("smarty_header.php");
 include_once ("connect.php");
 @session_start ();
