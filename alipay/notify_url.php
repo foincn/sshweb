@@ -70,7 +70,7 @@ if ($verify_result) { //认证合格
 		$pass = "buptisc";
 		
 		@mysql_connect ( $server, $user, $pass );
-		@mysql_select_db ( 'root' );
+		@mysql_select_db ( 'ssh' );
 		$sql = "select * from user where name='$receive_user'";
 		
 		$result = mysql_query ( $sql );
