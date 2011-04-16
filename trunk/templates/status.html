@@ -137,7 +137,35 @@
 <div class="c hide" id="notpaid"><b>付款后，您的登录用户名和密码就是SSH的用户名密码</b>。</div>
 </div>
 </body>
-<script language="javascript" src="js/status.js"></script>
+<script language="javascript" type="text/javascript">
+	$(document).ready(function() {
+	$("form[name='pay']").submit(function(){
+		$('.tip').hide();
+		//return false;
+	if($(":radio:checked").val() == undefined){
+			if(!$(".pay").next().is("span")){
+				$(".pay").after("<span class='errormsg'>请选择一项</span>");
+				return false;
+			}
+			return false;
+	}
+	else{
+		$("form[name='pay']").submit();
+	}
+
+	});
+	if($('#f').length)
+	{  $('#paid').removeClass('hide');
+		var offset = $('#n').offset();
+		$('.tip').removeClass('hide').css({'top': offset.top - 20 + 'px', 'left': offset.left+ 345 + 'px'});
+		}
+	else
+	{$('#notpaid').removeClass('hide');
+		var offset = $('#s').offset();
+		$('.tip').removeClass('hide').css({'top': offset.top - 20 + 'px', 'left': offset.left+ 160 + 'px'});
+		$('.p').css('border-color','#ccc #F0E68C #ccc #ccc');
+		}
+});// JavaScript Document</script>
 <script language="javascript" type="text/javascript" src="http://js.users.51.la/3904713.js"></script>
 <noscript><a href="http://www.51.la/?3904713" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/3904713.asp" style="border:none" /></a></noscript>
 
