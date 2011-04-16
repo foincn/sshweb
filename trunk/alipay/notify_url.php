@@ -65,12 +65,12 @@ if ($verify_result) { //认证合格
 			default :
 				$add = 0;
 		}
-		$server = "67.23.235.156:3306";
-		$user = "ssh";
+		$server = "174.140.166.123:3306";
+		$user = "root";
 		$pass = "buptisc";
 		
 		@mysql_connect ( $server, $user, $pass );
-		@mysql_select_db ( 'ssh' );
+		@mysql_select_db ( 'root' );
 		$sql = "select * from user where name='$receive_user'";
 		
 		$result = mysql_query ( $sql );
