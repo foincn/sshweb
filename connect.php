@@ -1,6 +1,6 @@
 <?php
 $server = "174.140.166.123:3306";
-$user = "root";
+$user = "ssh";
 $pass = "buptisc";
 
 

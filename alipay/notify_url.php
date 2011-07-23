@@ -66,7 +66,7 @@ if ($verify_result) { //认证合格
 				$add = 0;
 		}
 		$server = "174.140.166.123:3306";
-		$user = "root";
+		$user = "ssh";
 		$pass = "buptisc";
 		
 		@mysql_connect ( $server, $user, $pass );
