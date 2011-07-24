@@ -65,7 +65,7 @@ if ($verify_result) { //认证合格
 			default :
 				$add = 0;
 		}
-		$server = "184.82.230.116:3306";
+		$server = "174.140.166.123:3306";
 		$user = "root";
 		$pass = "buptisc";
 		
