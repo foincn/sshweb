@@ -12,10 +12,10 @@ $taobao_name = $_POST [taobao_name];
 //echo $_SESSION ['VCODE'];
 if ($pass2 == '') {
 	echo "输入错误";
-	$smarty->display ( "reg.html" );
+	$smarty->display ( "reg.html" );  /*
 } elseif ($_SESSION ['VCODE'] != $yz) {
 	echo "输入验证码错误";
-	$smarty->display ( "reg.html" );
+	$smarty->display ( "reg.html" );  */
 } else {
 	$sql = "select * from user where name = '$name'";
 	$result = mysql_query ( $sql );
@@ -46,7 +46,7 @@ if ($pass2 == '') {
 			header ( "Location:status.php?method=reg" );
 		}
 		
-	/*  这部分去掉注释就能实现重复注册检查功能，并注掉上方注释到这行
+
 		if ('' == $ip_in [ip]) {
 			//加用户
 			if ($pass != $pass2) {
@@ -68,7 +68,7 @@ if ($pass2 == '') {
 		else{
 			echo "不能重复注册获得测试号，如果需要获得多个测试号请与站长联系：旺旺kecker，QQ58287926";
 		}
-*/
+
 	
 	} else {
 		echo "有相同的用户名存在";
