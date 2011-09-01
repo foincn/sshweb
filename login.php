@@ -5,7 +5,7 @@ include_once ("connect.php");
 @session_start ();
 $name = $_POST [id];
 $pass = $_POST [pw];
-$yz = $_POST [yz];
+//$yz = $_POST [yz];
 //print_r($_POST);
 if ($name == '') {
 	echo " ‰»Î¥ÌŒÛ";

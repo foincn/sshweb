@@ -92,7 +92,7 @@ $('#inputurl').blur(function(){
 /*验证*/
 	$("#htmlform1 input[name='id']").blur(function(){$(this).checkform('',true);});
 	$("#htmlform1 input[name='pw']").blur(function(){$(this).checkform('',true);});
-	$("#htmlform1 input[name='yz']").blur(function(){$(this).checkform('yz',true);});
+	//$("#htmlform1 input[name='yz']").blur(function(){$(this).checkform('yz',true);});
 
 	$("#htmlform2 input[name='id']").blur(function(){$(this).checkform('id',true);});
 	$("#htmlform2 input[name='pw']").blur(function(){$(this).checkform('pw',true);});
@@ -105,13 +105,13 @@ $('#inputurl').blur(function(){
 	$("#htmlform2 input[name='taobao_name']").blur(function(){$(this).checkform('taobao',false);});
 	$("#htmlform2 input[name='qq']").blur(function(){$(this).checkform('qq',false);});
 	$("#htmlform2 input[name='email']").blur(function(){$(this).checkform('email',false);});
-	$("#htmlform2 input[name='yz']").blur(function(){$(this).checkform('yz',true);});
+	//$("#htmlform2 input[name='yz']").blur(function(){$(this).checkform('yz',true);});
 	
 
 $("#htmlform1 form").submit(function(){
 	if($("#htmlform1 input[name='id']").checkform('',true) && 
-	   $("#htmlform1 input[name='pw']").checkform('',true) &&	
-	   $("#htmlform1 input[name='yz']").checkform('yz',true)){ 
+	   $("#htmlform1 input[name='pw']").checkform('',true) /*&&	
+	   $("#htmlform1 input[name='yz']").checkform('yz',true)*/){ 
 		$("#htmlform1 form").submit();
 	}
 	else {
@@ -121,9 +121,8 @@ $("#htmlform1 form").submit(function(){
 $("#htmlform2 form").submit(function(){
 	if($("#htmlform2 input[name='id']").checkform('id',true) && 
 	   $("#htmlform2 input[name='pw']").checkform('pw',true) &&	
-	   //$("#htmlform2 input[name='pw2']").checkform('pw',true) &&
-	   $("#htmlform2 input[name='pw2']").checkeq( ($("#htmlform2 input[name='pw']").val()),( $("#htmlform2 input[name='pw2']").val()) ) &&
-	   $("#htmlform2 input[name='yz']").checkform('yz',true)){ 
+	   $("#htmlform2 input[name='pw2']").checkeq( ($("#htmlform2 input[name='pw']").val()),( $("#htmlform2 input[name='pw2']").val()) ) /*&&
+	   $("#htmlform2 input[name='yz']").checkform('yz',true)*/){ 
 		//必填项目填对之后，如果选填项目不对则清空后提交
 		if(!$("#htmlform2 input[name='taobao_name']").checkform('taobao',false)){$("#htmlform2 input[name='taobao_name']").val('');}
 		if(!$("#htmlform2 input[name='qq']").checkform('qq',false)){$("#htmlform2 input[name='qq']").val('');}
