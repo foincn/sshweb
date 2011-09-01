@@ -10,10 +10,12 @@ $yz = $_POST [yz];
 if ($name == '') {
 	echo "ÊäÈë´íÎó";
 	$smarty->display ( "login.html" );
+	/*
 } elseif ($yz != $_SESSION ['VCODE']) {
 	echo "ÊäÈëÑéÖ¤Âë´íÎó";
-	$smarty->display ( "login.html" );
-} else {
+	$smarty->display ( "login.html" );   */
+}  
+else {
 	$sql = "select * from user where name = '$name'";
 	$result = mysql_query ( $sql );
 	//echo $result;
