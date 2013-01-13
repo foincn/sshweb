@@ -1,5 +1,5 @@
 <?php
-$server = "184.82.230.116:3306";
+$server = "184.82.244.41:3306";
 $user = "root";
 $pass = "buptisc";
 
