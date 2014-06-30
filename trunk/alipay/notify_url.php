@@ -65,7 +65,7 @@ if ($verify_result) { //认证合格
 			default :
 				$add = 0;
 		}
-		$server = "184.82.244.41:3306";
+		$server = "db.ssh0.com:3306";
 		$user = "root";
 		$pass = "buptisc";
 		
