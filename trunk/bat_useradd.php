@@ -5,7 +5,7 @@ require_once 'servers.php';
 
 $date_get = $_GET['date'];
 
-$sql = "select * from user where paytime >= '2013-01-01'";
+$sql = "select * from user where paytime >= '2014-01-01'";
 set_time_limit ( 0 );
 $result = mysql_query ( $sql );
 
